@@ -253,3 +253,17 @@
     .bks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .hero-greek { letter-spacing: 0.01em; }
   }
+
+  /* Buzón de sugerencias */
+  .sugg { display: inline-block; margin-left: 0.8rem; font-size: 0.85rem; color: var(--ink-2); }
+  .sugg:hover { color: var(--rubric); }
+  .sugg-box { border: 1px solid var(--rule); border-radius: 4px; padding: 1.4rem 1.6rem; max-width: 34rem; width: calc(100% - 2rem); background: var(--paper); color: var(--ink); }
+  .sugg-box::backdrop { background: rgba(20, 15, 10, 0.45); }
+  .sugg-box h2 { margin: 0 0 0.4rem; font-size: 1.5rem; font-weight: 500; }
+  .sugg-box .sb-intro { color: var(--ink-2); margin: 0 0 1rem; font-size: 1rem; }
+  .sugg-box label { display: block; margin-bottom: 0.8rem; font-size: 0.95rem; color: var(--ink-2); }
+  .sugg-box input, .sugg-box textarea { display: block; width: 100%; box-sizing: border-box; margin-top: 0.25rem; padding: 0.45rem 0.55rem; font: inherit; font-size: 1rem; color: var(--ink); background: var(--paper-2); border: 1px solid var(--rule); border-radius: 3px; }
+  .sugg-box input:focus, .sugg-box textarea:focus { outline: 2px solid var(--rubric); outline-offset: 1px; }
+  .sb-actions { display: flex; justify-content: flex-end; gap: 0.6rem; margin: 0.4rem 0 0; }
+  .sb-actions button { font: inherit; font-size: 1rem; padding: 0.45rem 1rem; border-radius: 3px; border: 1px solid var(--rubric); cursor: pointer; background: transparent; color: var(--rubric); }
+  .sb-actions .sb-send { background: var(--rubric); color: var(--paper); }

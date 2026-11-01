@@ -3,13 +3,13 @@ const UI = {
   es: { dio: "Diofanto", takes: "Datos", cond: "Condición", answer: "Respuesta", ineq: "En ecuaciones", data: "Datos", modern: "Resolución moderna",
         run: "Ejecutar en SageMath", evalBtn: "Evaluar", problem: "Problema", nosage: "No se ha podido cargar SageMath Cell. Copia el código en",
         hideSol: "Ocultar soluciones", showSol: "Mostrar soluciones", hideEq: "Ocultar ecuaciones", showEq: "Mostrar ecuaciones",
-        greekNum: "Numerales griegos", arabicNum: "Numerales arábigos", hist: "Comentario",
+        greekNum: "Numerales griegos", arabicNum: "Numerales arábigos", hist: "Comentario", sugg: "Sugerir una corrección",
         geo: "Geometría", hideGeo: "Ocultar geometría", showGeo: "Mostrar geometría", model: "Modelo", param: "Parametrización", jac: "Jacobiano (modelo de Weierstrass mínimo)", cond: "Condición", conductor: "conductor", tors: "torsión", rank: "rango", gens: "generadores", mw: "grupo de Mordell–Weil", lmfdb: "en la LMFDB", lmfdbN: "curvas de conductor", pt: "punto de Diofanto", pts: "puntos racionales conocidos", magma: "Magma", sageCode: "SageMath", magmaBtn: "Abrir la calculadora Magma", magmaDone: "Copiado: pégalo en la calculadora (Ctrl+V) y pulsa Run", copyBtn: "Copiar el código", copied: "Copiado", openSage: "Abrir en SageMath Cell con el código cargado", nosage2: "Aquí no se puede incrustar la celda de SageMath; en su lugar:",
         kind: { det: "Dimensión 0: problema determinado (número finito de soluciones).", lin: "Variedad lineal de dimensión {d}.", conic: "Curva de género 0.", ell: "Curva de género 1 (curva elíptica).", g2: "Curva hiperelíptica de género 2.", var: "Variedad de dimensión {d}." }, slice: "La sección de Diofanto es una curva de género {g}." },
   en: { dio: "Diophantus", takes: "Given", cond: "Condition", answer: "Answer", ineq: "In equations", data: "Data", modern: "Modern solution",
         run: "Run in SageMath", evalBtn: "Evaluate", problem: "Problem", nosage: "SageMath Cell could not be loaded. Copy the code into",
         hideSol: "Hide solutions", showSol: "Show solutions", hideEq: "Hide equations", showEq: "Show equations",
-        greekNum: "Greek numerals", arabicNum: "Arabic numerals", hist: "Commentary",
+        greekNum: "Greek numerals", arabicNum: "Arabic numerals", hist: "Commentary", sugg: "Suggest a correction",
         geo: "Geometry", hideGeo: "Hide geometry", showGeo: "Show geometry", model: "Model", param: "Parametrization", jac: "Jacobian (minimal Weierstrass model)", conductor: "conductor", tors: "torsion", rank: "rank", gens: "generators", mw: "Mordell–Weil group", lmfdb: "in the LMFDB", lmfdbN: "curves of conductor", pt: "Diophantus’s point", pts: "known rational points", magma: "Magma", sageCode: "SageMath", magmaBtn: "Open the Magma calculator", magmaDone: "Copied: paste it into the calculator (Ctrl+V) and press Run", copyBtn: "Copy the code", copied: "Copied", openSage: "Open in SageMath Cell with the code loaded", nosage2: "The SageMath cell cannot be embedded here; instead:",
         kind: { det: "Dimension 0: a determinate problem (finitely many solutions).", lin: "Linear variety of dimension {d}.", conic: "Curve of genus 0.", ell: "Curve of genus 1 (elliptic curve).", g2: "Hyperelliptic curve of genus 2.", var: "Variety of dimension {d}." }, slice: "Diophantus’s section is a curve of genus {g}." }
 };
@@ -90,6 +90,7 @@ function renderBook(root, cfg) {
               (p.c ? "<p class=\"cond\"><b>" + u.cond + ":</b> " + p.c + "</p>" : "") +
               "<div class=\"sol\">" + p.s.map(t => "<p>" + t + "</p>").join("") + "</div>" +
               "<span class=\"resp\">" + u.answer + ": " + p.r + "</span>" +
+              "<a href=\"#\" class=\"sugg open-box\" data-pid=\"" + String(cfg.book).replace(/\.$/, "") + "." + p.n + "\">" + u.sugg + "</a>" +
               (p.h ? "<div class=\"hist\"><p class=\"eqh\">" + u.hist + "</p><p>" + p.h + "</p></div>" : "") +
             "</div>" +
             "<div class=\"eq\">" +
