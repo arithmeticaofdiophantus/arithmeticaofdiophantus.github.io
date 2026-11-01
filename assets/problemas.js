@@ -114,34 +114,58 @@ function renderBook(root, cfg) {
 
   // Botones / toggles: hide solutions, show equations (remembered in the browser)
   const TOG = [["toggle-sol", "hide-sol", "diofanto-ocultar", "showSol", "hideSol"], ["toggle-eq", "show-eq", "diofanto-ecuaciones", "hideEq", "showEq"], ["toggle-geo", "show-geo", "diofanto-geometria", "hideGeo", "showGeo"]];
+  // El estado vive en memoria (window.__vista) y se guarda en el navegador solo si se puede:
+  // en un marco aislado o con el almacenamiento bloqueado, los botones deben seguir funcionando.
+  const VISTA = window.__vista || (window.__vista = {});
+  TOG.forEach(([, , key]) => { if (!(key in VISTA)) { let on = false; try { on = localStorage.getItem(key) === "1"; } catch (e) {} VISTA[key] = on; } });
   function applyToggles() {
     const u = UI[currentLang()];
     TOG.forEach(([cls, bodyCls, key, onKey, offKey]) => {
-      let on = false;
-      try { on = localStorage.getItem(key) === "1"; } catch (e) {}
+      const on = !!VISTA[key];
       document.body.classList.toggle(bodyCls, on);
       document.querySelectorAll("." + cls).forEach(b => { b.textContent = on ? u[onKey] : u[offKey]; b.setAttribute("aria-pressed", on ? "true" : "false"); });
     });
   }
-  TOG.forEach(([cls, bodyCls, key]) => {
-    root.querySelectorAll("." + cls).forEach(btn => btn.addEventListener("click", () => {
+  function toggleHandler(bodyCls, key) {
+    return () => {
       const on = !document.body.classList.contains(bodyCls);
+      VISTA[key] = on;
       try { localStorage.setItem(key, on ? "1" : "0"); } catch (e) {}
       applyToggles();
-    }));
+    };
+  }
+  TOG.forEach(([cls, bodyCls, key]) => {
+    root.querySelectorAll("." + cls).forEach(btn => btn.addEventListener("click", toggleHandler(bodyCls, key)));
   });
+  // Barra flotante: los mismos botones siguen a mano cuando los de arriba salen de la pantalla
+  (function () {
+    const scope = root.closest(".view") || document;
+    const ctr = scope.querySelector(".controls");
+    if (!ctr || !("IntersectionObserver" in window)) return;
+    const dock = document.createElement("div");
+    dock.className = "dock"; dock.setAttribute("role", "group"); dock.setAttribute("aria-label", "Display / Vista");
+    TOG.forEach(([cls, bodyCls, key]) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "toggle " + cls; b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", toggleHandler(bodyCls, key));
+      dock.appendChild(b);
+    });
+    (root.closest(".view") || document.body).appendChild(dock);
+    new IntersectionObserver(es => es.forEach(e => dock.classList.toggle("on", !e.isIntersecting && e.boundingClientRect.top < 0))).observe(ctr);
+  })();
 
   // Numeración del índice / index numerals: Greek (α΄, β΄…) or Arabic (1, 2…)
+  if (!("num" in VISTA)) { let a = false; try { a = localStorage.getItem("diofanto-numeracion") === "arabiga"; } catch (e) {} VISTA.num = a; }
   function applyNumerals() {
-    let arabic = false;
-    try { arabic = localStorage.getItem("diofanto-numeracion") === "arabiga"; } catch (e) {}
+    const arabic = !!VISTA.num;
     document.body.classList.toggle("num-arabic", arabic);
     document.querySelectorAll(".numerals button").forEach(b => b.setAttribute("aria-pressed", (b.dataset.num === "arabiga") === arabic ? "true" : "false"));
   }
   numerals.addEventListener("click", ev => {
     const b = ev.target.closest("button");
     if (!b) return;
-    try { localStorage.setItem("diofanto-numeracion", b.dataset.num === "arabiga" ? "arabiga" : "griega"); } catch (e) {}
+    VISTA.num = b.dataset.num === "arabiga";
+    try { localStorage.setItem("diofanto-numeracion", VISTA.num ? "arabiga" : "griega"); } catch (e) {}
     applyNumerals();
   });
   applyNumerals();

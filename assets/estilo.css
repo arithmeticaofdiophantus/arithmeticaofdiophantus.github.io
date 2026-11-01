@@ -267,3 +267,21 @@
   .sb-actions { display: flex; justify-content: flex-end; gap: 0.6rem; margin: 0.4rem 0 0; }
   .sb-actions button { font: inherit; font-size: 1rem; padding: 0.45rem 1rem; border-radius: 3px; border: 1px solid var(--rubric); cursor: pointer; background: transparent; color: var(--rubric); }
   .sb-actions .sb-send { background: var(--rubric); color: var(--paper); }
+
+  /* Barra flotante con los botones de vista */
+  .dock {
+    position: fixed; left: 50%; bottom: calc(1rem + env(safe-area-inset-bottom, 0px)); z-index: 60;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; padding: 0.45rem 0.55rem; max-width: calc(100% - 2rem); box-sizing: border-box;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 999px; box-shadow: 0 0.8rem 2rem -0.8rem rgba(40, 30, 20, 0.45);
+    transform: translate(-50%, 160%); opacity: 0; pointer-events: none; transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .dock.on { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+  .dock button.toggle { font-size: 0.95rem; padding: 0.35rem 0.9rem; }
+  .dock .toggle-geo { display: none; }
+  .show-eq .dock .toggle-geo { display: inline-block; }
+  @media (max-width: 30rem) { .dock { border-radius: 1rem; } .dock button.toggle { font-size: 0.85rem; padding: 0.3rem 0.7rem; } }
+  @media (prefers-reduced-motion: reduce) { .dock { transition: none; } }
+  @media print { .dock { display: none; } }
+  .sugg-box .sb-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .sugg-box .sb-status { min-height: 1.2em; margin: 0.2rem 0 0.4rem; color: var(--answer); font-size: 0.95rem; }
+  .sb-actions button:disabled { opacity: 0.6; cursor: default; }
