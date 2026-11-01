@@ -53,8 +53,10 @@ document.querySelectorAll("a.mail").forEach(a => {
     let b = BOOKS[0];
     for (const x of BOOKS) { if (k < x[2]) { b = x; break; } k -= x[2]; }
     const id = b[1] + "-" + (k + 1);
-    if (document.querySelector("[data-view]")) location.hash = id;      // versión en un solo archivo
-    else location.href = b[0] + "#" + id;
+    if (window.__route) {                       // versión en un solo archivo
+      try { history.pushState(null, "", "#" + id); } catch (e) {}
+      window.__route(id);
+    } else location.href = b[0] + "#" + id;
   });
 })();
 
