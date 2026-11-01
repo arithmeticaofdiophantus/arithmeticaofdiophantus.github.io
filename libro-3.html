@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Didot&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Diofanto · Aritmética · Libro III</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+</head>
+<body class="lang-es">
+<div class="page">
+<!--BOOK1-->
+<div data-book="iii">
+    <div class="topbar">
+      <span><a href="index.html" data-i18n="es">← Inicio</a><a href="index.html" data-i18n="en">← Home</a></span>
+      <nav>
+        <span data-i18n="es"><a href="index.html#libros">Otros libros</a></span>
+        <span data-i18n="en"><a href="index.html#libros">Other books</a></span>
+        <span class="langsw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="en">EN</button></span>
+      </nav>
+    </div>
+    <header>
+      <p class="greek">ΔΙΟΦΑΝΤΟΥ ΑΛΕΞΑΝΔΡΕΩΣ ΑΡΙΘΜΗΤΙΚΩΝ Γ΄</p>
+      <h1><span data-i18n="es">Aritmética, Libro III</span><span data-i18n="en">Arithmetica, Book III</span></h1>
+      <div class="intro" data-i18n="es">
+<p>Los 21 problemas del tercer libro. Casi todos piden tres números con condiciones cruzadas sobre sumas o productos de pares, y la herramienta dominante es la <strong>doble ecuación</strong>: dos expresiones lineales en <var>x</var> que deben ser cuadrados a la vez, que Diofanto resuelve descomponiendo su diferencia en dos factores. El libro culmina con III.19, que exige cuatro triángulos rectángulos con la misma hipotenusa y en el que aparece por primera vez la composición de sumas de dos cuadrados (65 = 5 · 13).</p>
+        <p>Las resoluciones reproducen paso a paso lo que hace Diofanto, con sus elecciones de números y sus intentos descartados, según Tannery (1893) y Heath (1910). Los problemas 20 y 21 repiten II.15 y II.14. La columna de ecuaciones da la formulación moderna y permite ejecutar la resolución en SageMath.</p>
+      </div>
+      <div class="intro" data-i18n="en">
+<p>The 21 problems of the third book. Almost all ask for three numbers with crossed conditions on sums or products of pairs, and the dominant tool is the <strong>double equation</strong>: two expressions linear in <var>x</var> that must be squares at once, which Diophantus solves by splitting their difference into two factors. The book culminates in III.19, which requires four right triangles with the same hypotenuse and where the composition of sums of two squares (65 = 5 · 13) appears for the first time.</p>
+        <p>The solutions reproduce step by step what Diophantus does, with his choices of numbers and his discarded attempts, following Tannery (1893) and Heath (1910). Problems 20 and 21 repeat II.15 and II.14. The equations column gives the modern formulation and lets you run the solution in SageMath.</p>
+      </div>
+      <div class="controls">
+        <button class="toggle toggle-sol" type="button" aria-pressed="false">Ocultar soluciones</button>
+        <button class="toggle toggle-eq" type="button" aria-pressed="false">Mostrar ecuaciones</button>
+        <button class="toggle toggle-geo" type="button" aria-pressed="false">Mostrar geometría</button>
+        <span class="hint" data-i18n="es">oculta las soluciones para intentar los problemas; muestra las ecuaciones para ver, junto a cada uno, su formulación moderna, su resolución algebraica y una celda de SageMath; con las ecuaciones a la vista, muestra la geometría para ver qué variedad define el problema (dimensión, género, parametrización, curva elíptica con su grupo de Mordell–Weil y enlace a la LMFDB)</span>
+        <span class="hint" data-i18n="en">hide the solutions to try the problems yourself; show the equations to see, beside each one, its modern formulation, its algebraic solution and a SageMath cell; with the equations shown, show the geometry to see which variety the problem defines (dimension, genus, parametrization, elliptic curve with its Mordell–Weil group and LMFDB link)</span>
+      </div>
+    </header>
+    <div class="layout">
+      <nav class="rail" aria-label="Índice / Index"><div class="numerals" role="group"><button type="button" data-num="griega">α΄</button><button type="button" data-num="arabiga">1</button></div></nav>
+      <main class="main"></main>
+    </div>
+    <footer>
+      <p data-i18n="es">Numeración de Tannery y Heath. Los problemas 1–4 generalizan II.24–25 a tres números; III.15 y III.16 usan la identidad <var>xy</var> ± (<var>x</var> + <var>y</var>) = (<var>x</var> ± 1)(<var>y</var> ± 1) − 1. Resoluciones cotejadas con la traducción de Christianidis y Oaks (2023).</p>
+      <p data-i18n="en">Numbering of Tannery and Heath. Problems 1–4 generalize II.24–25 to three numbers; III.15 and III.16 use the identity <var>xy</var> ± (<var>x</var> + <var>y</var>) = (<var>x</var> ± 1)(<var>y</var> ± 1) − 1. Solutions checked against the translation of Christianidis and Oaks (2023).</p>
+      <p class="contact" data-i18n="es">Comentarios, correcciones y sugerencias: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [arroba] uam.es</a></p>
+      <p class="contact" data-i18n="en">Comments, corrections and suggestions: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [at] uam.es</a></p>
+    </footer>
+</div>
+<!--/BOOK1-->
+</div>
+<script src="assets/idioma.js"></script>
+<script src="assets/geo.js"></script>
+  <script src="assets/problemas.js"></script>
+<script src="assets/libro-3.js"></script>
+</body>
+</html>

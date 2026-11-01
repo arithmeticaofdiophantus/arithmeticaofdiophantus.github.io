@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Didot&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Diofanto · Aritmética · Libro I</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+</head>
+<body class="lang-es">
+<div class="page">
+<!--BOOK1-->
+<div data-book="i">
+    <div class="topbar">
+      <span><a href="index.html" data-i18n="es">← Inicio</a><a href="index.html" data-i18n="en">← Home</a></span>
+      <nav>
+        <span data-i18n="es"><a href="index.html#libros">Otros libros</a></span>
+        <span data-i18n="en"><a href="index.html#libros">Other books</a></span>
+        <span class="langsw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="en">EN</button></span>
+      </nav>
+    </div>
+    <header>
+      <p class="greek">ΔΙΟΦΑΝΤΟΥ ΑΛΕΞΑΝΔΡΕΩΣ ΑΡΙΘΜΗΤΙΚΩΝ Α΄</p>
+      <h1><span data-i18n="es">Aritmética, Libro I</span><span data-i18n="en">Arithmetica, Book I</span></h1>
+      <div class="intro" data-i18n="es">
+        <p>Los 39 problemas del primer libro, con el enunciado general, los valores concretos que elige Diofanto, la condición de posibilidad (<em>diorismós</em>) cuando él la enuncia, la resolución según su método y la respuesta.</p>
+        <p>Diofanto trabaja siempre con <strong>una sola incógnita</strong>, el <em>arithmós</em> (aquí <var>x</var>), y resuelve cada problema con números concretos; el procedimiento vale en general. El Libro I es casi todo determinado y lineal: es la escuela de la notación y de los trucos que usará en los libros siguientes. Las resoluciones reproducen paso a paso lo que hace Diofanto, con su misma elección de incógnita y sus mismos números intermedios, según el texto griego de Tannery (1893) y la traducción de Heath (1910), que fijan también la numeración. La columna de ecuaciones formula cada problema al estilo del «Conspectus of problems» de Christianidis y Oaks (2023), lo resuelve en notación actual y permite ejecutar la resolución en SageMath (celda de sagecell.sagemath.org; necesita conexión).</p>
+      </div>
+      <div class="intro" data-i18n="en">
+        <p>The 39 problems of the first book, with the general statement, the concrete values Diophantus chooses, the condition of possibility (<em>diorismos</em>) when he states one, the solution by his method, and the answer.</p>
+        <p>Diophantus always works with <strong>a single unknown</strong>, the <em>arithmos</em> (here <var>x</var>), and solves each problem with concrete numbers; the procedure holds in general. Book I is almost entirely determinate and linear: it is the training ground for the notation and the tricks he will use in the following books. The solutions reproduce step by step what Diophantus does, with his choice of unknown and his intermediate numbers, following Tannery’s Greek text (1893) and Heath’s translation (1910), which also fix the numbering. The equations column formulates each problem in the manner of the “Conspectus of problems” in Christianidis and Oaks (2023), solves it in modern notation, and lets you run the solution in SageMath (a sagecell.sagemath.org cell; needs a connection).</p>
+      </div>
+      <div class="controls">
+        <button class="toggle toggle-sol" type="button" aria-pressed="false">Ocultar soluciones</button>
+        <button class="toggle toggle-eq" type="button" aria-pressed="false">Mostrar ecuaciones</button>
+        <button class="toggle toggle-geo" type="button" aria-pressed="false">Mostrar geometría</button>
+        <span class="hint" data-i18n="es">oculta las soluciones para intentar los problemas; muestra las ecuaciones para ver, junto a cada uno, su formulación moderna, su resolución algebraica y una celda de SageMath; con las ecuaciones a la vista, muestra la geometría para ver qué variedad define el problema (dimensión, género, parametrización, curva elíptica con su grupo de Mordell–Weil y enlace a la LMFDB)</span>
+        <span class="hint" data-i18n="en">hide the solutions to try the problems yourself; show the equations to see, beside each one, its modern formulation, its algebraic solution and a SageMath cell; with the equations shown, show the geometry to see which variety the problem defines (dimension, genus, parametrization, elliptic curve with its Mordell–Weil group and LMFDB link)</span>
+      </div>
+    </header>
+    <div class="layout">
+      <nav class="rail" aria-label="Índice / Index"><div class="numerals" role="group"><button type="button" data-num="griega">α΄</button><button type="button" data-num="arabiga">1</button></div></nav>
+      <main class="main"></main>
+    </div>
+    <footer>
+      <p data-i18n="es">El Libro I va precedido de la dedicatoria a Dionisio, donde Diofanto presenta su notación: el <em>arithmós</em>, sus potencias hasta la sexta, el signo de resta y la regla de los signos. Los problemas 5, 6, 14, 16–19, 21, 27, 28 y 30 llevan condición explícita en el texto griego. Resoluciones cotejadas con la traducción de Christianidis y Oaks (2023).</p>
+      <p data-i18n="en">Book I is preceded by the dedication to Dionysius, where Diophantus presents his notation: the <em>arithmos</em>, its powers up to the sixth, the minus sign and the rule of signs. Problems 5, 6, 14, 16–19, 21, 27, 28 and 30 carry an explicit condition in the Greek text. Solutions checked against the translation of Christianidis and Oaks (2023).</p>
+      <p class="contact" data-i18n="es">Comentarios, correcciones y sugerencias: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [arroba] uam.es</a></p>
+      <p class="contact" data-i18n="en">Comments, corrections and suggestions: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [at] uam.es</a></p>
+    </footer>
+</div>
+<!--/BOOK1-->
+</div>
+<script src="assets/idioma.js"></script>
+<script src="assets/geo.js"></script>
+  <script src="assets/problemas.js"></script>
+<script src="assets/libro-1.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Didot&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Diofanto · Aritmética · Libro VI</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+</head>
+<body class="lang-es">
+<div class="page">
+<!--BOOK1-->
+<div data-book="vi">
+    <div class="topbar">
+      <span><a href="index.html" data-i18n="es">← Inicio</a><a href="index.html" data-i18n="en">← Home</a></span>
+      <nav>
+        <span data-i18n="es"><a href="index.html#libros">Otros libros</a></span>
+        <span data-i18n="en"><a href="index.html#libros">Other books</a></span>
+        <span class="langsw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="en">EN</button></span>
+      </nav>
+    </div>
+    <header>
+      <p class="greek">ΔΙΟΦΑΝΤΟΥ ΑΛΕΞΑΝΔΡΕΩΣ ΑΡΙΘΜΗΤΙΚΩΝ Ϛ΄</p>
+      <h1><span data-i18n="es">Aritmética, Libro VI</span><span data-i18n="en">Arithmetica, Book VI</span></h1>
+      <div class="intro" data-i18n="es">
+<p>Los 24 problemas del sexto y último libro griego, todos sobre <strong>triángulos rectángulos de lados racionales</strong>: hipotenusa y catetos que hacen cubos, el área más o menos un número dado, el área más lados o perímetro que deben ser cuadrados o cubos, y la bisectriz racional (VI.16). Diofanto «forma» cada triángulo a partir de dos números <var>p</var>, <var>q</var> (catetos 2<var>pq</var> y <var>p</var><sup>2</sup> − <var>q</var><sup>2</sup>, hipotenusa <var>p</var><sup>2</sup> + <var>q</var><sup>2</sup>), y cuando el triángulo 3, 4, 5 no sirve, busca otro con un problema auxiliar sobre el discriminante de la ecuación de segundo grado (VI.3–11).</p>
+        <p>Las resoluciones reproducen paso a paso lo que hace Diofanto, con los triángulos auxiliares y los intentos descartados, según Tannery (1893) y Heath (1910); la columna de ecuaciones da la formulación moderna, y todas las celdas de SageMath devuelven los triángulos de Diofanto.</p>
+      </div>
+      <div class="intro" data-i18n="en">
+<p>The 24 problems of the sixth and last Greek book, all on <strong>right triangles with rational sides</strong>: hypotenuse and legs making cubes, the area plus or minus a given number, the area plus sides or perimeter that must be squares or cubes, and the rational bisector (VI.16). Diophantus “forms” each triangle from two numbers <var>p</var>, <var>q</var> (legs 2<var>pq</var> and <var>p</var><sup>2</sup> − <var>q</var><sup>2</sup>, hypotenuse <var>p</var><sup>2</sup> + <var>q</var><sup>2</sup>), and when the 3, 4, 5 triangle fails he looks for another through an auxiliary problem on the discriminant of the quadratic equation (VI.3–11).</p>
+        <p>The solutions reproduce step by step what Diophantus does, with the auxiliary triangles and the discarded attempts, following Tannery (1893) and Heath (1910); the equations column gives the modern formulation, and every SageMath cell returns Diophantus’s triangles.</p>
+      </div>
+      <div class="controls">
+        <button class="toggle toggle-sol" type="button" aria-pressed="false">Ocultar soluciones</button>
+        <button class="toggle toggle-eq" type="button" aria-pressed="false">Mostrar ecuaciones</button>
+        <button class="toggle toggle-geo" type="button" aria-pressed="false">Mostrar geometría</button>
+        <span class="hint" data-i18n="es">oculta las soluciones para intentar los problemas; muestra las ecuaciones para ver, junto a cada uno, su formulación moderna, su resolución algebraica y una celda de SageMath; con las ecuaciones a la vista, muestra la geometría para ver qué variedad define el problema (dimensión, género, parametrización, curva elíptica con su grupo de Mordell–Weil y enlace a la LMFDB)</span>
+        <span class="hint" data-i18n="en">hide the solutions to try the problems yourself; show the equations to see, beside each one, its modern formulation, its algebraic solution and a SageMath cell; with the equations shown, show the geometry to see which variety the problem defines (dimension, genus, parametrization, elliptic curve with its Mordell–Weil group and LMFDB link)</span>
+      </div>
+    </header>
+    <div class="layout">
+      <nav class="rail" aria-label="Índice / Index"><div class="numerals" role="group"><button type="button" data-num="griega">α΄</button><button type="button" data-num="arabiga">1</button></div></nav>
+      <main class="main"></main>
+    </div>
+    <footer>
+      <p data-i18n="es">Numeración de Tannery y Heath. Tras el Libro VI, los manuscritos griegos transmiten el tratado <em>Sobre los números poligonales</em>, incompleto. Los cuatro libros árabes (IV–VII en la numeración de Sesiano) van, en el orden original, entre el Libro III y este Libro IV griego. Resoluciones cotejadas con la traducción de Christianidis y Oaks (2023).</p>
+      <p data-i18n="en">Numbering of Tannery and Heath. After Book VI the Greek manuscripts transmit the incomplete treatise <em>On Polygonal Numbers</em>. The four Arabic books (IV–VII in Sesiano’s numbering) come, in the original order, between Book III and the Greek Book IV. Solutions checked against the translation of Christianidis and Oaks (2023).</p>
+      <p class="contact" data-i18n="es">Comentarios, correcciones y sugerencias: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [arroba] uam.es</a></p>
+      <p class="contact" data-i18n="en">Comments, corrections and suggestions: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [at] uam.es</a></p>
+    </footer>
+</div>
+<!--/BOOK1-->
+</div>
+<script src="assets/idioma.js"></script>
+<script src="assets/geo.js"></script>
+  <script src="assets/problemas.js"></script>
+<script src="assets/libro-6.js"></script>
+</body>
+</html>

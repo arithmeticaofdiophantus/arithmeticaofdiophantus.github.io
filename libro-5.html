@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Didot&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Diofanto · Aritmética · Libro V</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+</head>
+<body class="lang-es">
+<div class="page">
+<!--BOOK1-->
+<div data-book="v">
+    <div class="topbar">
+      <span><a href="index.html" data-i18n="es">← Inicio</a><a href="index.html" data-i18n="en">← Home</a></span>
+      <nav>
+        <span data-i18n="es"><a href="index.html#libros">Otros libros</a></span>
+        <span data-i18n="en"><a href="index.html#libros">Other books</a></span>
+        <span class="langsw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="en">EN</button></span>
+      </nav>
+    </div>
+    <header>
+      <p class="greek">ΔΙΟΦΑΝΤΟΥ ΑΛΕΞΑΝΔΡΕΩΣ ΑΡΙΘΜΗΤΙΚΩΝ Ε΄</p>
+      <h1><span data-i18n="es">Aritmética, Libro V</span><span data-i18n="en">Arithmetica, Book V</span></h1>
+      <div class="intro" data-i18n="es">
+<p>Los 30 problemas del quinto libro griego, los más difíciles de la obra. Diofanto cita dos veces sus <em>Porismas</em> perdidos (V.3, V.5), usa tres triángulos rectángulos de la misma área (V.7–8), e introduce el <strong>método de aproximación</strong> (<em>parisótes</em>) para dividir un número en dos o tres cuadrados casi iguales (V.9–14), con las condiciones aritméticas más famosas de la obra: qué números son suma de dos o de tres cuadrados. Termina con el único problema de la vida corriente, el del vino (V.30).</p>
+        <p>Entre V.19 y V.20 los manuscritos tienen una laguna: se ha perdido la resolución de V.19 y, según Tannery y Heath, tres problemas más. Las resoluciones reproducen paso a paso lo que hace Diofanto, con sus intentos descartados y sus problemas auxiliares, según Tannery (1893) y Heath (1910); la columna de ecuaciones da la formulación moderna, y todas las celdas de SageMath devuelven las respuestas de Diofanto.</p>
+      </div>
+      <div class="intro" data-i18n="en">
+<p>The 30 problems of the fifth Greek book, the hardest of the work. Diophantus twice cites his lost <em>Porisms</em> (V.3, V.5), uses three right triangles of the same area (V.7–8), and introduces the <strong>method of approximation</strong> (<em>parisotes</em>) to divide a number into two or three nearly equal squares (V.9–14), with the most famous arithmetical conditions of the work: which numbers are sums of two or of three squares. It ends with the only everyday problem, the wine problem (V.30).</p>
+        <p>Between V.19 and V.20 the manuscripts have a lacuna: the solution of V.19 and, according to Tannery and Heath, three more problems are lost. The solutions reproduce step by step what Diophantus does, with his discarded attempts and auxiliary problems, following Tannery (1893) and Heath (1910); the equations column gives the modern formulation, and every SageMath cell returns Diophantus’s answers.</p>
+      </div>
+      <div class="controls">
+        <button class="toggle toggle-sol" type="button" aria-pressed="false">Ocultar soluciones</button>
+        <button class="toggle toggle-eq" type="button" aria-pressed="false">Mostrar ecuaciones</button>
+        <button class="toggle toggle-geo" type="button" aria-pressed="false">Mostrar geometría</button>
+        <span class="hint" data-i18n="es">oculta las soluciones para intentar los problemas; muestra las ecuaciones para ver, junto a cada uno, su formulación moderna, su resolución algebraica y una celda de SageMath; con las ecuaciones a la vista, muestra la geometría para ver qué variedad define el problema (dimensión, género, parametrización, curva elíptica con su grupo de Mordell–Weil y enlace a la LMFDB)</span>
+        <span class="hint" data-i18n="en">hide the solutions to try the problems yourself; show the equations to see, beside each one, its modern formulation, its algebraic solution and a SageMath cell; with the equations shown, show the geometry to see which variety the problem defines (dimension, genus, parametrization, elliptic curve with its Mordell–Weil group and LMFDB link)</span>
+      </div>
+    </header>
+    <div class="layout">
+      <nav class="rail" aria-label="Índice / Index"><div class="numerals" role="group"><button type="button" data-num="griega">α΄</button><button type="button" data-num="arabiga">1</button></div></nav>
+      <main class="main"></main>
+    </div>
+    <footer>
+      <p data-i18n="es">Numeración de Tannery y Heath. Las condiciones de V.9 y V.11 (números que son suma de dos y de tres cuadrados) están corruptas en los manuscritos; se dan las restituciones habituales. Los tres problemas perdidos tras V.19 son, según Heath: suma cuadrada y cada uno menos el cubo de la suma cuadrado; suma dada y cada uno más el cubo de la suma cuadrado; suma dada y el cubo de la suma menos cada uno cuadrado. Resoluciones cotejadas con la traducción de Christianidis y Oaks (2023).</p>
+      <p data-i18n="en">Numbering of Tannery and Heath. The conditions of V.9 and V.11 (numbers that are sums of two and of three squares) are corrupt in the manuscripts; the usual restorations are given. The three problems lost after V.19 are, according to Heath: sum a square and each minus the cube of the sum a square; sum given and each plus the cube of the sum a square; sum given and the cube of the sum minus each a square. Solutions checked against the translation of Christianidis and Oaks (2023).</p>
+      <p class="contact" data-i18n="es">Comentarios, correcciones y sugerencias: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [arroba] uam.es</a></p>
+      <p class="contact" data-i18n="en">Comments, corrections and suggestions: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [at] uam.es</a></p>
+    </footer>
+</div>
+<!--/BOOK1-->
+</div>
+<script src="assets/idioma.js"></script>
+<script src="assets/geo.js"></script>
+  <script src="assets/problemas.js"></script>
+<script src="assets/libro-5.js"></script>
+</body>
+</html>

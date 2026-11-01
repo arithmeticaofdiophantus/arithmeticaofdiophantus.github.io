@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Didot&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Diofanto · Aritmética · Libro IV</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+</head>
+<body class="lang-es">
+<div class="page">
+<!--BOOK1-->
+<div data-book="iv">
+    <div class="topbar">
+      <span><a href="index.html" data-i18n="es">← Inicio</a><a href="index.html" data-i18n="en">← Home</a></span>
+      <nav>
+        <span data-i18n="es"><a href="index.html#libros">Otros libros</a></span>
+        <span data-i18n="en"><a href="index.html#libros">Other books</a></span>
+        <span class="langsw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="en">EN</button></span>
+      </nav>
+    </div>
+    <header>
+      <p class="greek">ΔΙΟΦΑΝΤΟΥ ΑΛΕΞΑΝΔΡΕΩΣ ΑΡΙΘΜΗΤΙΚΩΝ Δ΄</p>
+      <h1><span data-i18n="es">Aritmética, Libro IV</span><span data-i18n="en">Arithmetica, Book IV</span></h1>
+      <div class="intro" data-i18n="es">
+<p>Los 40 problemas del cuarto libro griego (en el orden original iba después de los cuatro libros árabes, hoy perdidos en griego). Entran los cubos: dividir un número en dos cubos, igualar sumas y diferencias de cubos, cubos que deben ser cuadrados. Aparecen también las primeras <strong>soluciones indeterminadas</strong> dadas como expresiones (IV.19), los problemas de productos más uno (IV.19–20, origen de las cuádruplas diofánticas), la suma de cuatro cuadrados (IV.29–30) y los problemas 36–37, que en notación moderna son sistemas con recíprocos.</p>
+        <p>Las resoluciones reproducen paso a paso lo que hace Diofanto, incluidos los intentos que descarta por llevar a raíces irracionales o a valores negativos («demasiado grande», dice él) y los problemas auxiliares que resuelve antes (IV.8, 9, 28, 31, 39), según Tannery (1893) y Heath (1910). La columna de ecuaciones da la formulación moderna y permite ejecutar la resolución en SageMath; todas las celdas devuelven las respuestas de Diofanto.</p>
+      </div>
+      <div class="intro" data-i18n="en">
+<p>The 40 problems of the fourth Greek book (in the original order it came after the four Arabic books, now lost in Greek). Cubes enter: dividing a number into two cubes, equating sums and differences of cubes, cubes that must be squares. Here too appear the first <strong>indeterminate solutions</strong> given as expressions (IV.19), the problems on products plus one (IV.19–20, the origin of Diophantine quadruples), the sum of four squares (IV.29–30) and problems 36–37, which in modern notation are systems in reciprocals.</p>
+        <p>The solutions reproduce step by step what Diophantus does, including the attempts he discards for leading to irrational roots or to negative values (“too large”, he says) and the auxiliary problems he solves first (IV.8, 9, 28, 31, 39), following Tannery (1893) and Heath (1910). The equations column gives the modern formulation and lets you run the solution in SageMath; every cell returns Diophantus’s answers.</p>
+      </div>
+      <div class="controls">
+        <button class="toggle toggle-sol" type="button" aria-pressed="false">Ocultar soluciones</button>
+        <button class="toggle toggle-eq" type="button" aria-pressed="false">Mostrar ecuaciones</button>
+        <button class="toggle toggle-geo" type="button" aria-pressed="false">Mostrar geometría</button>
+        <span class="hint" data-i18n="es">oculta las soluciones para intentar los problemas; muestra las ecuaciones para ver, junto a cada uno, su formulación moderna, su resolución algebraica y una celda de SageMath; con las ecuaciones a la vista, muestra la geometría para ver qué variedad define el problema (dimensión, género, parametrización, curva elíptica con su grupo de Mordell–Weil y enlace a la LMFDB)</span>
+        <span class="hint" data-i18n="en">hide the solutions to try the problems yourself; show the equations to see, beside each one, its modern formulation, its algebraic solution and a SageMath cell; with the equations shown, show the geometry to see which variety the problem defines (dimension, genus, parametrization, elliptic curve with its Mordell–Weil group and LMFDB link)</span>
+      </div>
+    </header>
+    <div class="layout">
+      <nav class="rail" aria-label="Índice / Index"><div class="numerals" role="group"><button type="button" data-num="griega">α΄</button><button type="button" data-num="arabiga">1</button></div></nav>
+      <main class="main"></main>
+    </div>
+    <footer>
+      <p data-i18n="es">Numeración de Tannery y Heath. Diofanto intercala varios lemas (antes de IV.34, 35 y 36 sobre productos y sumas); aquí se han incorporado al problema correspondiente. Resoluciones cotejadas con la traducción de Christianidis y Oaks (2023).</p>
+      <p data-i18n="en">Numbering of Tannery and Heath. Diophantus inserts several lemmas (before IV.34, 35 and 36, on products and sums); here they are folded into the corresponding problem. Solutions checked against the translation of Christianidis and Oaks (2023).</p>
+      <p class="contact" data-i18n="es">Comentarios, correcciones y sugerencias: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [arroba] uam.es</a></p>
+      <p class="contact" data-i18n="en">Comments, corrections and suggestions: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [at] uam.es</a></p>
+    </footer>
+</div>
+<!--/BOOK1-->
+</div>
+<script src="assets/idioma.js"></script>
+<script src="assets/geo.js"></script>
+  <script src="assets/problemas.js"></script>
+<script src="assets/libro-4.js"></script>
+</body>
+</html>

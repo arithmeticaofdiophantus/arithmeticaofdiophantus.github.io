@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Didot&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Diofanto · Aritmética · Libro II</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+</head>
+<body class="lang-es">
+<div class="page">
+<!--BOOK1-->
+<div data-book="ii">
+    <div class="topbar">
+      <span><a href="index.html" data-i18n="es">← Inicio</a><a href="index.html" data-i18n="en">← Home</a></span>
+      <nav>
+        <span data-i18n="es"><a href="index.html#libros">Otros libros</a></span>
+        <span data-i18n="en"><a href="index.html#libros">Other books</a></span>
+        <span class="langsw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="en">EN</button></span>
+      </nav>
+    </div>
+    <header>
+      <p class="greek">ΔΙΟΦΑΝΤΟΥ ΑΛΕΞΑΝΔΡΕΩΣ ΑΡΙΘΜΗΤΙΚΩΝ Β΄</p>
+      <h1><span data-i18n="es">Aritmética, Libro II</span><span data-i18n="en">Arithmetica, Book II</span></h1>
+      <div class="intro" data-i18n="es">
+        <p>Los 35 problemas del segundo libro. Aquí empieza el Diofanto propiamente dicho: casi todos los problemas son <strong>indeterminados</strong> (tienen infinitas soluciones racionales) y se trata de encontrar una. Aparecen los recursos que darán fama a la obra: igualar una expresión cuadrática al cuadrado de «un múltiplo de <var>x</var> menos un número» elegido para que los términos en <var>x</var><sup>2</sup> se cancelen (II.8, el problema de Fermat), la «doble ecuación» (II.11–13) y las identidades con sumas y productos (II.30–35).</p>
+        <p>Como en el Libro I, las resoluciones reproducen paso a paso lo que hace Diofanto, incluidos los intentos que descarta, según Tannery (1893) y Heath (1910). Los problemas 1–5 repiten problemas del Libro I y el texto de 17–18 es dudoso; se indica en cada caso. La columna de ecuaciones da la formulación moderna, en la que estos problemas se convierten en puntos racionales de cónicas y en parametrizaciones, y permite ejecutar la resolución en SageMath.</p>
+      </div>
+      <div class="intro" data-i18n="en">
+        <p>The 35 problems of the second book. Here Diophantus proper begins: almost all the problems are <strong>indeterminate</strong> (they have infinitely many rational solutions) and the task is to find one. The devices that made the work famous appear: equating a quadratic expression to the square of “a multiple of <var>x</var> minus a number” chosen so that the <var>x</var><sup>2</sup> terms cancel (II.8, Fermat’s problem), the “double equation” (II.11–13) and the identities with sums and products (II.30–35).</p>
+        <p>As in Book I, the solutions reproduce step by step what Diophantus does, including the attempts he discards, following Tannery (1893) and Heath (1910). Problems 1–5 repeat problems of Book I and the text of 17–18 is doubtful; each case is noted. The equations column gives the modern formulation, in which these problems become rational points on conics and parametrizations, and lets you run the solution in SageMath.</p>
+      </div>
+      <div class="controls">
+        <button class="toggle toggle-sol" type="button" aria-pressed="false">Ocultar soluciones</button>
+        <button class="toggle toggle-eq" type="button" aria-pressed="false">Mostrar ecuaciones</button>
+        <button class="toggle toggle-geo" type="button" aria-pressed="false">Mostrar geometría</button>
+        <span class="hint" data-i18n="es">oculta las soluciones para intentar los problemas; muestra las ecuaciones para ver, junto a cada uno, su formulación moderna, su resolución algebraica y una celda de SageMath; con las ecuaciones a la vista, muestra la geometría para ver qué variedad define el problema (dimensión, género, parametrización, curva elíptica con su grupo de Mordell–Weil y enlace a la LMFDB)</span>
+        <span class="hint" data-i18n="en">hide the solutions to try the problems yourself; show the equations to see, beside each one, its modern formulation, its algebraic solution and a SageMath cell; with the equations shown, show the geometry to see which variety the problem defines (dimension, genus, parametrization, elliptic curve with its Mordell–Weil group and LMFDB link)</span>
+      </div>
+    </header>
+    <div class="layout">
+      <nav class="rail" aria-label="Índice / Index"><div class="numerals" role="group"><button type="button" data-num="griega">α΄</button><button type="button" data-num="arabiga">1</button></div></nav>
+      <main class="main"></main>
+    </div>
+    <footer>
+      <p data-i18n="es">Numeración de Tannery y Heath. Los problemas 6, 7 y 8 llevan condición o comentario explícito en el texto; en el margen de II.8 escribió Fermat la nota que se convirtió en su último teorema. Resoluciones cotejadas con la traducción de Christianidis y Oaks (2023).</p>
+      <p data-i18n="en">Numbering of Tannery and Heath. Problems 6, 7 and 8 carry an explicit condition or remark in the text; in the margin of II.8 Fermat wrote the note that became his Last Theorem. Solutions checked against the translation of Christianidis and Oaks (2023).</p>
+      <p class="contact" data-i18n="es">Comentarios, correcciones y sugerencias: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [arroba] uam.es</a></p>
+      <p class="contact" data-i18n="en">Comments, corrections and suggestions: <a class="mail" data-u="enrique.gonzalez.jimenez" data-d="uam.es" href="#">enrique.gonzalez.jimenez [at] uam.es</a></p>
+    </footer>
+</div>
+<!--/BOOK1-->
+</div>
+<script src="assets/idioma.js"></script>
+<script src="assets/geo.js"></script>
+  <script src="assets/problemas.js"></script>
+<script src="assets/libro-2.js"></script>
+</body>
+</html>
