@@ -1,13 +1,16 @@
-// Idioma / Language: "es" o "en". Se recuerda en el navegador y se avisa a la página con el evento "langchange".
+// Idioma / Language: "en" (por defecto) o "es". Se recuerda en el navegador y se avisa a la página con el evento "langchange".
 (function () {
-  let lang = "es";
-  try { lang = localStorage.getItem("diofanto-idioma") === "en" ? "en" : "es"; } catch (e) {}
+  let lang = "en";
+  try { lang = localStorage.getItem("diofanto-idioma") === "es" ? "es" : "en"; } catch (e) {}
   function apply() {
     document.documentElement.lang = lang;
     document.body.classList.toggle("lang-en", lang === "en");
     document.body.classList.toggle("lang-es", lang === "es");
     document.querySelectorAll(".langsw button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false"));
-    document.title = lang === "en" ? document.title.replace("Aritmética", "Arithmetica").replace("Libro", "Book") : document.title.replace("Arithmetica", "Aritmética").replace("Book", "Libro");
+    if (!window.__titleEs) window.__titleEs = document.title;   // el título del HTML está en castellano
+    const es = window.__titleEs;
+    document.title = lang === "es" ? es : es.replace("Diofanto", "Diophantus").replace("Aritmética", "Arithmetica")
+      .replace(/Libro (\S+) árabe/, "Arabic Book $1").replace("Libro", "Book").replace("Sobre los números poligonales", "On Polygonal Numbers");
     document.dispatchEvent(new CustomEvent("langchange", { detail: lang }));
   }
   window.getLang = () => lang;
