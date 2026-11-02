@@ -402,7 +402,7 @@
     "A square and its side",
     "Sum, difference, product and squares",
     "Two numbers in a given ratio and their squares",
-    "An arithmetical progression"
+    "An arithmetic progression"
   ];
 
   const EN_P = {
@@ -513,7 +513,7 @@
           s: ["<var>x</var><sup>2</sup> = 2 · 4<var>x</var>, so <var>x</var> = 8."], r: "8 and 24" },
     38: { g: "To find two numbers in a given ratio such that the square of the lesser has to their difference a given ratio.", d: "ratios 3 : 1 and 6 : 1",
           s: ["<var>x</var><sup>2</sup> = 6 · 2<var>x</var>, so <var>x</var> = 12.", "Corollaries: the same with the square of the greater relative to the lesser, the greater, the sum or the difference."], r: "12 and 36" },
-    39: { g: "Given two numbers, to find a third such that the sums of each two, multiplied by the remaining one, give three numbers in arithmetical progression.", d: "given numbers 3 and 5",
+    39: { g: "Given two numbers, to find a third such that the sums of each two, multiplied by the remaining one, give three numbers in arithmetic progression.", d: "given numbers 3 and 5",
           s: ["Let the third be <var>x</var>. The three products are (3 + 5)<var>x</var> = 8<var>x</var>, (3 + <var>x</var>) · 5 = 5<var>x</var> + 15 and (5 + <var>x</var>) · 3 = 3<var>x</var> + 15. Which is the greatest depends on <var>x</var>, so Diophantus distinguishes cases.",
               "If 8<var>x</var> is the greatest: 8<var>x</var> − (5<var>x</var> + 15) = (5<var>x</var> + 15) − (3<var>x</var> + 15), so <var>x</var> = 15.",
               "If 8<var>x</var> is the middle: (5<var>x</var> + 15) − 8<var>x</var> = 8<var>x</var> − (3<var>x</var> + 15), so <var>x</var> = 15/4 = 3¾.",
@@ -560,7 +560,7 @@
     36: { m: ["{x2} = {l} = 6, {x1} = {k}{l} = 18."] },
     37: { m: ["{x2}² = {l}({k} + 1){x2}: {x2} = {l}({k} + 1) = 8, {x1} = 24."] },
     38: { m: ["{x2}² = {l}({k} − 1){x2}: {x2} = {l}({k} − 1) = 12, {x1} = 36."] },
-    39: { f: ["({a} + {b}){x}, ({a} + {x}){b}, ({b} + {x}){a} in arithmetical progression (in some order)"],
+    39: { f: ["({a} + {b}){x}, ({a} + {x}){b}, ({b} + {x}){a} in arithmetic progression (in some order)"],
           m: ["The three values are 8{x}, 5{x} + 15 and 3{x} + 15. Since 5{x} + 15 > 3{x} + 15 always, there are three possible orders depending on where 8{x} falls, and in each the middle term is half the sum of the extremes: 2(5{x} + 15) = 11{x} + 15 gives {x} = 15; 16{x} = 8{x} + 30 gives {x} = 15/4; 2(3{x} + 15) = 13{x} + 15 gives {x} = 15/7."],
           s: "a, b = 3, 5\nx = var('x')\nu, v, w = (a + b)*x, (a + x)*b, (b + x)*a\n# the middle term is half the sum of the extremes\n[solve(2*mid == s1 + s2, x) for mid, s1, s2 in [(v, u, w), (u, v, w), (w, u, v)]]" }
   };
