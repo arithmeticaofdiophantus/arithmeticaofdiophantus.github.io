@@ -138,3 +138,29 @@ document.querySelectorAll("a.mail").forEach(a => {
     d.showModal(); d.querySelector(pid ? "textarea" : "input[name=problem]").focus();
   });
 })();
+
+// Modo nocturno: alterna entre claro y oscuro; por defecto sigue la preferencia del sistema
+(function () {
+  const root = document.documentElement;
+  const mq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
+  const current = () => root.getAttribute("data-theme") || (mq && mq.matches ? "dark" : "light");
+  const LBL = { en: { dark: "Dark mode", light: "Light mode" }, es: { dark: "Modo nocturno", light: "Modo claro" } };
+  function paint() {
+    const dark = current() === "dark", l = LBL[window.getLang ? window.getLang() : "en"];
+    document.querySelectorAll(".themesw").forEach(b => {
+      b.textContent = dark ? "\u2600\uFE0E" : "\u263E";          // sol para volver a claro, luna para pasar a oscuro
+      const t = dark ? l.light : l.dark;
+      b.setAttribute("aria-label", t); b.title = t;
+    });
+  }
+  document.addEventListener("click", ev => {
+    if (!ev.target.closest(".themesw")) return;
+    const next = current() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("diofanto-tema", next); } catch (e) {}
+    paint();
+  });
+  if (mq && mq.addEventListener) mq.addEventListener("change", paint);
+  document.addEventListener("langchange", paint);
+  paint();
+})();
