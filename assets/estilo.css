@@ -382,3 +382,22 @@
 
   .fermat-tag { font-size: 0.95rem; color: var(--ink-2); margin: 0.6rem 0 0; }
   @media print { .obs-filter, .lat-all { display: none !important; } }
+
+  /* ---------- La Aritmética en la teoría de números ---------- */
+  .legado .intro { max-width: 70ch; }
+  .leg-toc { margin: 1.5rem 0 2.5rem; }
+  .leg-toc h2 { font-size: 1.2rem; font-weight: 500; margin: 0 0 0.5rem; }
+  .leg-toc ol { columns: 2 22rem; column-gap: 2rem; padding-left: 1.4rem; margin: 0; }
+  .leg-toc li { margin-bottom: 0.3rem; break-inside: avoid; }
+  .leg-toc a, .leg a { color: var(--rubric); }
+  .leg { border-top: 1px solid var(--rule); padding-top: 1.2rem; margin-bottom: 2.2rem; max-width: 78ch; }
+  .leg h2 { font-size: 1.45rem; font-weight: 500; margin: 0 0 0.5rem; display: flex; gap: 0.7rem; align-items: baseline; }
+  .leg .leg-n { color: var(--rubric); font-size: 1.1rem; min-width: 1.4rem; }
+  .leg .leg-meta { color: var(--ink-2); font-size: 0.98rem; margin: 0 0 0.8rem; }
+  .leg .leg-meta span + span::before { content: ""; }
+  .leg dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.45rem 1.1rem; margin: 0 0 0.6rem; }
+  .leg dt { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); padding-top: 0.25rem; }
+  .leg dd { margin: 0; }
+  .leg h3 { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); font-weight: 400; margin: 0.9rem 0 0.4rem; }
+  .leg ul.bib li { font-size: 0.95rem; }
+  @media (max-width: 34rem) { .leg dl { grid-template-columns: 1fr; gap: 0.15rem; } .leg dd { margin-bottom: 0.5rem; } }

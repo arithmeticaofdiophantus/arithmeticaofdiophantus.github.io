@@ -10,7 +10,7 @@
     if (!window.__titleEs) window.__titleEs = document.title;   // el título del HTML está en castellano
     const es = window.__titleEs;
     document.title = lang === "es" ? es : es.replace("Diofanto", "Diophantus").replace("Aritmética", "Arithmetica")
-      .replace(/Libro (\S+) árabe/, "Arabic Book $1").replace("Libro", "Book").replace("Sobre los números poligonales", "On Polygonal Numbers").replace("Observaciones de Fermat", "Fermat’s observations");
+      .replace(/Libro (\S+) árabe/, "Arabic Book $1").replace("Libro", "Book").replace("Sobre los números poligonales", "On Polygonal Numbers").replace("Observaciones de Fermat", "Fermat’s observations").replace("Legado en la teoría de números", "Legacy in number theory");
     document.dispatchEvent(new CustomEvent("langchange", { detail: lang }));
   }
   window.getLang = () => lang;

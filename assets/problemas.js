@@ -83,7 +83,7 @@ function linkify(el) {
 }
 // en la versión de un solo archivo, las referencias usan el enrutador
 document.addEventListener("click", ev => {
-  const a = ev.target.closest("a.xref, .fermat-tag a, [data-view=fermat] a[href^='#']");
+  const a = ev.target.closest("a.xref, .fermat-tag a, [data-view=fermat] a[href^='#'], [data-view=legado] a[href^='#']");
   if (!a || !window.__route || !a.getAttribute("href").startsWith("#") || a.getAttribute("href") === "#") return;
   ev.preventDefault(); const id = a.getAttribute("href").slice(1);
   try { history.pushState(null, "", "#" + id); } catch (e) {}
