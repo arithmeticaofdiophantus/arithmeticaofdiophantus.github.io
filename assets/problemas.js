@@ -52,6 +52,44 @@ function geoHTML(cfg, n, lang, T, esc) {
   if (g.mg) h += "<p class=\"codeh\">" + u.magma + "</p><div class=\"magma-wrap\"><pre class=\"sage-code magma-code\">" + esc(g.mg) + "</pre><button class=\"magma-btn\" type=\"button\">" + u.copyBtn + "</button> <a class=\"magma-link\" href=\"https://magma-maths.org/calc/\" target=\"_blank\" rel=\"noopener\">" + u.magmaBtn + "</a><span class=\"magma-msg\"></span></div>";
   return h + "</div>";
 }
+// Enlaces automáticos a otros problemas («II.8», «IVa.25», «VIa.17»…)
+const XREF_BOOKS = { I: ["1", "i", 39], II: ["2", "ii", 35], III: ["3", "iii", 21], IV: ["4", "iv", 40], V: ["5", "v", 30], VI: ["6", "vi", 24],
+  IVa: ["a4", "a4", 44], Va: ["a5", "a5", 16], VIa: ["a6", "a6", 23], VIIa: ["a7", "a7", 18] };
+function linkify(el) {
+  if (!el || !document.createTreeWalker) return;
+  const RX = /\b(VII|VI|V|IV|III|II|I)(a?)\.(\d{1,2})\b/g;
+  const single = !!document.querySelector("[data-view]");
+  const here = (location.pathname.split("/").pop() || "index.html");
+  const skip = "pre, code, a, button, h3 .num, .rail, script, textarea, input, select, .sage-cell";
+  const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, { acceptNode: n => (n.parentElement && n.parentElement.closest(skip)) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+  const nodes = []; while (w.nextNode()) nodes.push(w.currentNode);
+  nodes.forEach(t => {
+    RX.lastIndex = 0;
+    if (!RX.test(t.data)) return;
+    RX.lastIndex = 0;
+    const frag = document.createDocumentFragment(); let last = 0, m;
+    while ((m = RX.exec(t.data))) {
+      const b = XREF_BOOKS[m[1] + (m[2] ? "a" : "")], n = +m[3];
+      if (!b || n < 1 || n > b[2]) continue;
+      frag.append(t.data.slice(last, m.index));
+      const a = document.createElement("a"), id = b[1] + "-" + n, page = "libro-" + b[0] + ".html";
+      a.className = "xref"; a.textContent = m[0];
+      a.href = (single || page === here) ? "#" + id : page + "#" + id;
+      frag.append(a); last = m.index + m[0].length;
+    }
+    if (!last) return;
+    frag.append(t.data.slice(last)); t.replaceWith(frag);
+  });
+}
+// en la versión de un solo archivo, las referencias usan el enrutador
+document.addEventListener("click", ev => {
+  const a = ev.target.closest("a.xref, .fermat-tag a, [data-view=fermat] a[href^='#']");
+  if (!a || !window.__route || !a.getAttribute("href").startsWith("#") || a.getAttribute("href") === "#") return;
+  ev.preventDefault(); const id = a.getAttribute("href").slice(1);
+  try { history.pushState(null, "", "#" + id); } catch (e) {}
+  window.__route(id);
+});
+
 function renderBook(root, cfg) {
   if (!root) return;
   const T = s => s.replace(/\{([A-Za-z])(\d?)\}/g, (m, l, i) => "<var>" + l + "</var>" + (i ? "<sub>" + i + "</sub>" : ""));
@@ -171,6 +209,23 @@ function renderBook(root, cfg) {
   applyNumerals();
   render();
   document.addEventListener("langchange", render);
+  // Referencias cruzadas: «II.8», «IVa.25», «véase III.6»… se convierten en enlaces al problema
+  const fermat = () => { if (window.__fermatMark) window.__fermatMark(cfg.id, main, currentLang()); };
+  fermat(); linkify(main);
+  document.addEventListener("langchange", () => { fermat(); linkify(main); });
+  // Botón de imprimir / guardar como PDF (imprime lo que se ve: con o sin soluciones, ecuaciones y geometría)
+  (function () {
+    const scope = root.closest(".view") || document;
+    const ctr = scope.querySelector(".controls");
+    if (!ctr || ctr.querySelector(".print-btn")) return;
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "toggle print-btn";
+    const label = () => { b.textContent = currentLang() === "es" ? "Imprimir / PDF" : "Print / PDF"; };
+    label(); document.addEventListener("langchange", label);
+    b.addEventListener("click", () => window.print());
+    const last = ctr.querySelector(".toggle-geo") || ctr.querySelector(".toggle-eq");
+    if (last) last.after(b); else ctr.appendChild(b);
+  })();
 }
 
 // Celdas de SageMath / SageMath cells, created on demand (needs sagecell.sagemath.org).

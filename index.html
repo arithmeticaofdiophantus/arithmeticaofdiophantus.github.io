@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Didot&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/estilo.css">
+<link rel="stylesheet" href="assets/estilo.css?v=d0f617e8">
 <title>Diofanto · Aritmética</title>
 <!--meta-->
 <meta name="description" content="Diophantus’s Arithmetica: all ten surviving books, Greek and Arabic, with 290 problems, Diophantus’s solutions, modern equations, SageMath cells and the geometry of each problem. In English and Spanish.">
@@ -28,7 +28,7 @@
 <meta name="twitter:image" content="https://arithmeticaofdiophantus.github.io/assets/img/og-card.jpg">
 <!--/meta-->
 <script>try{var t=localStorage.getItem("diofanto-tema");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<script src="assets/imagenes.js"></script>
+<script src="assets/imagenes.js?v=598421c4"></script>
 </head>
 <body class="lang-en">
 <div class="page">
@@ -36,8 +36,8 @@
     <div class="topbar">
       <span><span data-i18n="es">Diofanto de Alejandría</span><span data-i18n="en">Diophantus of Alexandria</span></span>
       <nav>
-        <span data-i18n="es"><a href="#imagenes">Imágenes</a><a href="#libros">Libros</a><a href="#curvas">Curvas</a><a href="#ediciones">Ediciones</a><a href="#bibliografia">Bibliografía</a></span>
-        <span data-i18n="en"><a href="#imagenes">Images</a><a href="#libros">Books</a><a href="#curvas">Curves</a><a href="#ediciones">Editions</a><a href="#bibliografia">Bibliography</a></span>
+        <span data-i18n="es"><a href="#buscar">Buscar</a><a href="#notacion">Notación</a><a href="#imagenes">Imágenes</a><a href="#libros">Libros</a><a href="#curvas">Curvas</a><a href="fermat.html">Fermat</a><a href="#ediciones">Ediciones</a><a href="#bibliografia">Bibliografía</a></span>
+        <span data-i18n="en"><a href="#buscar">Search</a><a href="#notacion">Notation</a><a href="#imagenes">Images</a><a href="#libros">Books</a><a href="#curvas">Curves</a><a href="fermat.html">Fermat</a><a href="#ediciones">Editions</a><a href="#bibliografia">Bibliography</a></span>
         <button type="button" class="themesw" aria-label="Dark mode" title="Dark mode">☾</button><span class="langsw" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en">EN</button><button type="button" data-lang="es">ES</button></span>
       </nav>
     </div>
@@ -50,6 +50,7 @@
         <p class="hero-cta">
           <a class="cta cta-main random-problem" href="libro-1.html"><span data-i18n="es">Un problema al azar</span><span data-i18n="en">A random problem</span></a>
           <a class="cta" href="libro-2.html#ii-8"><span data-i18n="es">El problema de Fermat, II.8</span><span data-i18n="en">Fermat’s problem, II.8</span></a>
+          <a class="cta" href="fermat.html"><span data-i18n="es">Las 48 observaciones de Fermat</span><span data-i18n="en">Fermat’s 48 observations</span></a>
         </p>
         <figure class="notation">
           <div class="nt-line" aria-label="4x² + 16 − 16x = 16 − x²">
@@ -60,8 +61,8 @@
           <span class="nt" style="--i:4"><span class="nt-g" lang="grc"><span class="mo">Μ<sup>ο</sup></span> <span class="nm">ις</span></span><span class="nt-m">16</span></span>
           <span class="nt" style="--i:5"><span class="nt-g" lang="grc"><span class="ms">⋔</span> <span class="dy">Δ<sup>Υ</sup></span> <span class="nm">α</span></span><span class="nt-m">− <var>x</var>²</span></span>
           </div>
-          <figcaption data-i18n="es">Así escribe Diofanto la ecuación del problema II.8: <span lang="grc">Δ<sup>Υ</sup></span> es el cuadrado de la incógnita, <span lang="grc">ς</span> la incógnita, <span lang="grc">Μ<sup>ο</sup></span> las unidades y <span lang="grc">⋔</span> el signo de restar. De ahí obtiene 5<var>x</var>² = 16<var>x</var> y <var>x</var> = 16/5.</figcaption>
-          <figcaption data-i18n="en">This is how Diophantus writes the equation of problem II.8: <span lang="grc">Δ<sup>Υ</sup></span> is the square of the unknown, <span lang="grc">ς</span> the unknown, <span lang="grc">Μ<sup>ο</sup></span> the units and <span lang="grc">⋔</span> the sign for subtraction. From it he gets 5<var>x</var>² = 16<var>x</var> and <var>x</var> = 16/5.</figcaption>
+          <figcaption data-i18n="es">Así escribe Diofanto la ecuación del problema II.8: <span lang="grc">Δ<sup>Υ</sup></span> es el cuadrado de la incógnita, <span lang="grc">ς</span> la incógnita, <span lang="grc">Μ<sup>ο</sup></span> las unidades y <span lang="grc">⋔</span> el signo de restar. De ahí obtiene 5<var>x</var>² = 16<var>x</var> y <var>x</var> = 16/5. <a href="#notacion">Más sobre la notación</a>.</figcaption>
+          <figcaption data-i18n="en">This is how Diophantus writes the equation of problem II.8: <span lang="grc">Δ<sup>Υ</sup></span> is the square of the unknown, <span lang="grc">ς</span> the unknown, <span lang="grc">Μ<sup>ο</sup></span> the units and <span lang="grc">⋔</span> the sign for subtraction. From it he gets 5<var>x</var>² = 16<var>x</var> and <var>x</var> = 16/5. <a href="#notacion">More on the notation</a>.</figcaption>
         </figure>
       </div>
       <figure class="hero-folio">
@@ -111,6 +112,43 @@
       <div class="life" data-i18n="en"><p>Of Diophantus’s life we know little more than the epigram in the <em>Palatine Anthology</em> tells: he was a boy for a sixth of his life, a youth for a twelfth, married a seventh later, had a son five years after that, the son lived half as long as his father, and Diophantus died four years later. Solve the problem and he lived 84 years.</p></div>
     </section>
 
+    <section class="search-sec" id="buscar">
+      <h2><span data-i18n="es">Buscar un problema</span><span data-i18n="en">Find a problem</span></h2>
+      <form class="search" role="search">
+        <input type="search" name="q" autocomplete="off" aria-label="Search / Buscar">
+        <select name="libro" aria-label="Book / Libro"></select>
+        <select name="geo" aria-label="Geometry / Geometría"></select>
+        <label class="hist-c"><input type="checkbox" name="hist"> <span class="hist-l"></span></label>
+      </form>
+      <p class="count" role="status"></p>
+      <ol class="results"></ol>
+    </section>
+    <section class="notation-sec" id="notacion">
+      <div data-i18n="es">
+        <h2>La notación de Diofanto</h2>
+        <p class="lead">La <em>Aritmética</em> es el primer texto conservado que nombra una incógnita y escribe sus potencias con signos abreviados. Diofanto llama a la incógnita «número» (<em>arithmós</em>) y a sus potencias por su nombre geométrico o por composición de nombres; en los manuscritos esas palabras aparecen abreviadas.</p>
+        <div class="tablewrap"><table class="notation-t"><tr><th>Signo</th><th>Palabra griega</th><th>Significado</th><th>Hoy</th></tr><tr><td class="sym" lang="grc">ς</td><td lang="grc">ἀριθμός, <em>arithmós</em></td><td>el número buscado, la incógnita</td><td><var>x</var></td></tr><tr><td class="sym" lang="grc"><span class="dy">Δ<sup>Υ</sup></span></td><td lang="grc">δύναμις, <em>dýnamis</em></td><td>su cuadrado («potencia»)</td><td><var>x</var>²</td></tr><tr><td class="sym" lang="grc"><span class="dy">Κ<sup>Υ</sup></span></td><td lang="grc">κύβος, <em>kýbos</em></td><td>su cubo</td><td><var>x</var>³</td></tr><tr><td class="sym" lang="grc"><span class="dy">Δ<sup>Υ</sup>Δ</span></td><td lang="grc">δυναμοδύναμις</td><td>cuadrado del cuadrado</td><td><var>x</var>⁴</td></tr><tr><td class="sym" lang="grc"><span class="dy">ΔΚ<sup>Υ</sup></span></td><td lang="grc">δυναμόκυβος</td><td>cuadrado por cubo</td><td><var>x</var>⁵</td></tr><tr><td class="sym" lang="grc"><span class="dy">Κ<sup>Υ</sup>Κ</span></td><td lang="grc">κυβόκυβος</td><td>cubo del cubo</td><td><var>x</var>⁶</td></tr><tr><td class="sym" lang="grc"><span class="dy">Μ<sup>ο</sup></span></td><td lang="grc">μονάδες, <em>monádes</em></td><td>las unidades: el término numérico</td><td>1</td></tr><tr><td class="sym" lang="grc">ς<sup>χ</sup>, <span class="dy">Δ<sup>Υ</sup></span><sup>χ</sup></td><td lang="grc">ἀριθμοστόν, δυναμοστόν</td><td>las partes recíprocas de la incógnita y de su cuadrado</td><td>1/<var>x</var>, 1/<var>x</var>²</td></tr><tr><td class="sym" lang="grc">⋔</td><td lang="grc">λεῖψις, <em>léipsis</em></td><td>«falta»: resta; todo lo que se resta va agrupado detrás</td><td>−</td></tr><tr><td class="sym" lang="grc">ἴσ.</td><td lang="grc">ἴσοι, <em>ísoi</em></td><td>«son iguales»: separa los dos miembros</td><td>=</td></tr></table></div>
+        <p>Las reglas para escribir una expresión son tres: los términos se suman poniéndolos uno junto a otro, sin signo; cada potencia va seguida de su coeficiente, escrito con las letras-número griegas (α = 1, β = 2, …, ι = 10, κ = 20, …, ρ = 100, de modo que ις = 16); y todos los términos que se restan se agrupan al final, detrás del signo ⋔. Las fracciones se escriben de varias maneras, por ejemplo con la expresión ἐν μορίῳ («en la parte de»).</p>
+        <p>Por ejemplo,</p>
+        <p class="nt-ex" lang="grc"><span class="dy">Κ<sup>Υ</sup></span> <span class="nm">α</span> ς <span class="nm">η</span> <span class="ms">⋔</span> <span class="dy">Δ<sup>Υ</sup></span> <span class="nm">ε</span> <span class="dy">Μ<sup>ο</sup></span> <span class="nm">α</span></p>
+        <p>que hoy escribimos <var>x</var>³ − 5<var>x</var>² + 8<var>x</var> − 1: el cubo y las ocho incógnitas se suman, y el cuadrado quíntuple y la unidad se restan. La ecuación del problema <a href="libro-2.html#ii-8">II.8</a>, la de la portada, es</p>
+        <p class="nt-ex" lang="grc"><span class="dy">Δ<sup>Υ</sup></span> <span class="nm">δ</span> <span class="dy">Μ<sup>ο</sup></span> <span class="nm">ις</span> <span class="ms">⋔</span> ς <span class="nm">ις</span> <span class="ms">ἴσ.</span> <span class="dy">Μ<sup>ο</sup></span> <span class="nm">ις</span> <span class="ms">⋔</span> <span class="dy">Δ<sup>Υ</sup></span> <span class="nm">α</span></p>
+        <p>es decir, 4<var>x</var>² + 16 − 16<var>x</var> = 16 − <var>x</var>².</p>
+        <p class="note">Estos signos nos llegan a través de manuscritos bizantinos muy posteriores a Diofanto, y su forma varía de uno a otro; los estudios recientes, como los de Christianidis y Oaks, los leen más como abreviaturas de palabras que como símbolos en el sentido moderno. Los libros árabes no usan signos: todo se escribe con palabras, la «cosa» (<em>shayʾ</em>), el <em>māl</em> y el «cubo» (<em>kaʿb</em>).</p>
+      </div>
+      <div data-i18n="en">
+        <h2>Diophantus’s notation</h2>
+        <p class="lead">The <em>Arithmetica</em> is the earliest surviving text that names an unknown and writes its powers with abbreviated signs. Diophantus calls the unknown “number” (<em>arithmos</em>) and its powers by their geometric names or by combinations of names; in the manuscripts these words appear abbreviated.</p>
+        <div class="tablewrap"><table class="notation-t"><tr><th>Sign</th><th>Greek word</th><th>Meaning</th><th>Today</th></tr><tr><td class="sym" lang="grc">ς</td><td lang="grc">ἀριθμός, <em>arithmós</em></td><td>the number sought, the unknown</td><td><var>x</var></td></tr><tr><td class="sym" lang="grc"><span class="dy">Δ<sup>Υ</sup></span></td><td lang="grc">δύναμις, <em>dýnamis</em></td><td>its square (“power”)</td><td><var>x</var>²</td></tr><tr><td class="sym" lang="grc"><span class="dy">Κ<sup>Υ</sup></span></td><td lang="grc">κύβος, <em>kýbos</em></td><td>its cube</td><td><var>x</var>³</td></tr><tr><td class="sym" lang="grc"><span class="dy">Δ<sup>Υ</sup>Δ</span></td><td lang="grc">δυναμοδύναμις</td><td>square of the square</td><td><var>x</var>⁴</td></tr><tr><td class="sym" lang="grc"><span class="dy">ΔΚ<sup>Υ</sup></span></td><td lang="grc">δυναμόκυβος</td><td>square times cube</td><td><var>x</var>⁵</td></tr><tr><td class="sym" lang="grc"><span class="dy">Κ<sup>Υ</sup>Κ</span></td><td lang="grc">κυβόκυβος</td><td>cube of the cube</td><td><var>x</var>⁶</td></tr><tr><td class="sym" lang="grc"><span class="dy">Μ<sup>ο</sup></span></td><td lang="grc">μονάδες, <em>monádes</em></td><td>the units: the numerical term</td><td>1</td></tr><tr><td class="sym" lang="grc">ς<sup>χ</sup>, <span class="dy">Δ<sup>Υ</sup></span><sup>χ</sup></td><td lang="grc">ἀριθμοστόν, δυναμοστόν</td><td>the reciprocal parts of the unknown and of its square</td><td>1/<var>x</var>, 1/<var>x</var>²</td></tr><tr><td class="sym" lang="grc">⋔</td><td lang="grc">λεῖψις, <em>léipsis</em></td><td>“lack”: subtraction; everything subtracted is grouped after it</td><td>−</td></tr><tr><td class="sym" lang="grc">ἴσ.</td><td lang="grc">ἴσοι, <em>ísoi</em></td><td>“are equal”: separates the two sides</td><td>=</td></tr></table></div>
+        <p>There are three rules for writing an expression: terms are added by placing them side by side, with no sign; each power is followed by its coefficient, written with the Greek letter-numerals (α = 1, β = 2, …, ι = 10, κ = 20, …, ρ = 100, so that ις = 16); and all the terms that are subtracted are grouped at the end, after the sign ⋔. Fractions are written in several ways, for instance with the phrase ἐν μορίῳ (“in the part of”).</p>
+        <p>For example,</p>
+        <p class="nt-ex" lang="grc"><span class="dy">Κ<sup>Υ</sup></span> <span class="nm">α</span> ς <span class="nm">η</span> <span class="ms">⋔</span> <span class="dy">Δ<sup>Υ</sup></span> <span class="nm">ε</span> <span class="dy">Μ<sup>ο</sup></span> <span class="nm">α</span></p>
+        <p>which we write today as <var>x</var>³ − 5<var>x</var>² + 8<var>x</var> − 1: the cube and the eight unknowns are added, and the five squares and the unit are subtracted. The equation of problem <a href="libro-2.html#ii-8">II.8</a>, the one on the front page, is</p>
+        <p class="nt-ex" lang="grc"><span class="dy">Δ<sup>Υ</sup></span> <span class="nm">δ</span> <span class="dy">Μ<sup>ο</sup></span> <span class="nm">ις</span> <span class="ms">⋔</span> ς <span class="nm">ις</span> <span class="ms">ἴσ.</span> <span class="dy">Μ<sup>ο</sup></span> <span class="nm">ις</span> <span class="ms">⋔</span> <span class="dy">Δ<sup>Υ</sup></span> <span class="nm">α</span></p>
+        <p>that is, 4<var>x</var>² + 16 − 16<var>x</var> = 16 − <var>x</var>².</p>
+        <p class="note">These signs reach us through Byzantine manuscripts written long after Diophantus, and their form varies from one to another; recent studies, such as those of Christianidis and Oaks, read them as abbreviations of words rather than as symbols in the modern sense. The Arabic books use no signs: everything is written in words, the “thing” (<em>shayʾ</em>), the <em>māl</em> and the “cube” (<em>kaʿb</em>).</p>
+      </div>
+    </section>
     <section id="imagenes">
       <div data-i18n="es"><h2>Portadas de las ediciones</h2>
       <p class="lead">Portadas de las ediciones y traducciones principales, de Xylander (1575) a Heath (1910), todas de dominio público, y la página 61 de la edición de 1670 con el problema II.8 y la observación de Fermat.</p></div>
@@ -186,6 +224,7 @@
           <a class="book" href="libro-5.html"><div class="bnum">Ε΄</div><div class="btitle">Libro V</div><div class="bmeta">30 problemas · la doble ecuación</div></a>
           <a class="book" href="libro-6.html"><div class="bnum">Ϛ΄</div><div class="btitle">Libro VI</div><div class="bmeta">24 problemas · triángulos rectángulos racionales</div></a>
           <a class="book" href="libro-p.html"><div class="bnum">Π</div><div class="btitle">Sobre los números poligonales</div><div class="bmeta">5 proposiciones · el tratado incompleto</div></a>
+          <a class="book" href="fermat.html"><div class="bnum">F</div><div class="btitle">Las observaciones de Fermat</div><div class="bmeta">48 notas al margen · edición de 1670</div></a>
         </div>
       </div>
       <div data-i18n="en">
@@ -203,6 +242,7 @@
           <a class="book" href="libro-5.html"><div class="bnum">Ε΄</div><div class="btitle">Book V</div><div class="bmeta">30 problems · the double equation</div></a>
           <a class="book" href="libro-6.html"><div class="bnum">Ϛ΄</div><div class="btitle">Book VI</div><div class="bmeta">24 problems · rational right triangles</div></a>
           <a class="book" href="libro-p.html"><div class="bnum">Π</div><div class="btitle">On Polygonal Numbers</div><div class="bmeta">5 propositions · the incomplete treatise</div></a>
+          <a class="book" href="fermat.html"><div class="bnum">F</div><div class="btitle">Fermat’s observations</div><div class="bmeta">48 marginal notes · 1670 edition</div></a>
         </div>
       </div>
     </section>
@@ -246,33 +286,35 @@
       <h3>Francés</h3>
       <ul>
         <li>Simon Stevin, <em>L’Arithmétique</em>, Leiden 1585: libros I–IV; Albert Girard añadió los libros V y VI en la reedición de 1625.</li>
-        <li>Paul Ver Eecke, Brujas 1926 (reimpresión París 1959): primera traducción francesa completa de los seis libros griegos y del tratado sobre los números poligonales.</li>
-        <li>André Allard, Lovaina 1980: nueva edición crítica con traducción, tesis doctoral que quedó inédita.</li>
-        <li>Roshdi Rashed, <em>Diophante, Les Arithmétiques</em>, tomos III y IV, Les Belles Lettres 1984: texto árabe y traducción francesa de los libros IV–VII. Con Christian Houzel publicó en 2013 un comentario completo de toda la obra.</li>
+        <li>Paul Ver Eecke, <em>Diophante d’Alexandrie. Les six livres arithmétiques et le livre des nombres polygones</em>, Brujas, Desclée de Brouwer, 1926 (reimpresión París, Blanchard, 1959): primera traducción francesa completa de los seis libros griegos y del tratado sobre los números poligonales.</li>
+        <li>André Allard, <em>Diophante d’Alexandrie. Les Arithmétiques. Histoire du texte grec, édition critique, traductions et scolies</em>, Lovaina 1980: nueva edición crítica con traducción, tesis doctoral que quedó inédita.</li>
+        <li>Roshdi Rashed, <em>Diophante, Les Arithmétiques</em>, tomos III y IV, Les Belles Lettres (Collection des Universités de France), 1984: texto árabe y traducción francesa de los libros IV–VII. Con Christian Houzel publicó en 2013 un comentario completo de toda la obra, <em>Les Arithmétiques de Diophante. Lecture historique et mathématique</em> (De Gruyter, <a href="https://doi.org/10.1515/9783110336481">doi:10.1515/9783110336481</a>).</li>
       </ul>
       <h3>Alemán</h3>
       <ul>
         <li>Friedrich Theodor Poselger, 1810: solo los números poligonales.</li>
-        <li>Otto Schulz, Berlín 1822: primera traducción completa a una lengua moderna.</li>
-        <li>Gustav Wertheim, Leipzig 1890.</li>
-        <li>Arthur Czwalina, Gotinga 1952.</li>
+        <li>Otto Schulz, <em>Diophantus von Alexandria arithmetische Aufgaben nebst dessen Schrift über die Polygon-Zahlen</em>, Berlín 1822: primera traducción completa a una lengua moderna.</li>
+        <li>Gustav Wertheim, <em>Die Arithmetik und die Schrift über Polygonalzahlen des Diophantus von Alexandria</em>, Leipzig, Teubner, 1890.</li>
+        <li>Arthur Czwalina, <em>Arithmetik des Diophantos aus Alexandria</em>, Gotinga, Vandenhoeck &amp; Ruprecht, 1952.</li>
       </ul>
       <h3>Inglés</h3>
       <ul>
-        <li>Thomas L. Heath, <em>Diophantus of Alexandria. A Study in the History of Greek Algebra</em>, Cambridge 1885; 2.ª ed. 1910: no es una traducción literal sino una paráfrasis en notación moderna, pero es la que más ha circulado (reimpresa por Dover).</li>
-        <li>Jacques Sesiano, <em>Books IV to VII of Diophantus’ Arithmetica in the Arabic Translation Attributed to Qusta ibn Luqa</em>, Springer 1982: texto árabe y traducción inglesa.</li>
+        <li>Thomas L. Heath, <em>Diophantus of Alexandria. A Study in the History of Greek Algebra</em>, Cambridge 1885; 2.ª ed. 1910: no es una traducción literal sino una paráfrasis en notación moderna, pero es la que más ha circulado (reimpresa por Dover en 1964).</li>
+        <li>Jacques Sesiano, <em>Books IV to VII of Diophantus’ Arithmetica in the Arabic Translation Attributed to Qusta ibn Luqa</em>, Nueva York, Springer, 1982: edición crítica del texto árabe, traducción inglesa y estudio de las interpolaciones (<a href="https://doi.org/10.1007/978-1-4613-8174-7">doi:10.1007/978-1-4613-8174-7</a>).</li>
         <li>Jean Christianidis y Jeffrey Oaks, <em>The Arithmetica of Diophantus. A Complete Translation and Commentary</em>, Routledge 2023: primera traducción de los diez libros conservados, con comentario problema a problema. Es hoy la edición de referencia.</li>
       </ul>
       <h3>Árabe</h3>
-      <ul><li>Traducción medieval atribuida a Qusta ibn Luqa (siglo IX), única fuente de los libros IV–VII. Roshdi Rashed publicó el texto árabe en El Cairo en 1975, antes de su edición francesa.</li></ul>
+      <ul><li>Traducción medieval atribuida a Qusta ibn Luqa (siglo IX), única fuente de los libros IV–VII. Roshdi Rashed publicó el texto árabe en El Cairo en 1975 (<em>L’Art de l’Algèbre de Diophante</em>), antes de su edición francesa.</li></ul>
       <h3>Griego moderno</h3>
-      <ul><li>Evangelos Stamatis, Atenas 1963, con el texto antiguo de Tannery enfrentado.</li></ul>
+      <ul><li>Evangelos Stamatis, <em>Διοφάντου Ἀριθμητικά</em>, Atenas 1963, con el texto antiguo de Tannery enfrentado e incluyendo reconstrucciones de los problemas perdidos.</li></ul>
       <h3>Ruso</h3>
       <ul><li>Moscú, Nauka, 1974: traducción de I. N. Veselovski con comentario de I. G. Bashmakova; incluye los números poligonales.</li></ul>
       <h3>Español</h3>
       <ul><li><em>La Aritmética y el libro Sobre los números poligonales</em>, Nivola 2007 (2 vols.): contiene los seis libros griegos y los cuatro árabes; fue la traducción más reciente de Diofanto hasta la inglesa de 2023.</li></ul>
       <h3>Italiano</h3>
-      <ul><li>No hay traducción completa. Lo más cercano es la <em>Algebra</em> de Bombelli (1572), que adapta los problemas, y la edición de Fabio Acerbi (2011) del tratado sobre los números poligonales.</li></ul>
+      <ul><li>No hay traducción completa. Lo más cercano es la <em>Algebra</em> de Bombelli (1572), que adapta los problemas, y la edición crítica, con traducción y comentario, de Fabio Acerbi del tratado sobre los números poligonales: <em>Diofanto. De polygonis numeris</em>, Pisa–Roma, Fabrizio Serra, 2011.</li></ul>
+      <h3>Neerlandés</h3>
+      <ul><li>Andreas Meskens y Nico van der Auwera, <em>Diophantos van Alexandrië, Arithmetika</em>, 2006.</li></ul>
       <p class="lead" style="margin-top:1.5rem">De otras lenguas no se conoce traducción completa.</p>
       </div>
       <div data-i18n="en">
@@ -289,63 +331,43 @@
       <h3>French</h3>
       <ul>
         <li>Simon Stevin, <em>L’Arithmétique</em>, Leiden 1585: Books I–IV; Albert Girard added Books V and VI in the 1625 reissue.</li>
-        <li>Paul Ver Eecke, Bruges 1926 (reprinted Paris 1959): first complete French translation of the six Greek books and the treatise on polygonal numbers.</li>
-        <li>André Allard, Louvain 1980: new critical edition with translation, a doctoral thesis that remained unpublished.</li>
-        <li>Roshdi Rashed, <em>Diophante, Les Arithmétiques</em>, vols. III and IV, Les Belles Lettres 1984: Arabic text and French translation of Books IV–VII. With Christian Houzel he published in 2013 a complete commentary on the whole work.</li>
+        <li>Paul Ver Eecke, <em>Diophante d’Alexandrie. Les six livres arithmétiques et le livre des nombres polygones</em>, Bruges, Desclée de Brouwer, 1926 (reprinted Paris, Blanchard, 1959): first complete French translation of the six Greek books and the treatise on polygonal numbers.</li>
+        <li>André Allard, <em>Diophante d’Alexandrie. Les Arithmétiques. Histoire du texte grec, édition critique, traductions et scolies</em>, Louvain 1980: new critical edition with translation, a doctoral thesis that remained unpublished.</li>
+        <li>Roshdi Rashed, <em>Diophante, Les Arithmétiques</em>, vols. III and IV, Les Belles Lettres (Collection des Universités de France), 1984: Arabic text and French translation of Books IV–VII. With Christian Houzel he published in 2013 a complete commentary on the whole work, <em>Les Arithmétiques de Diophante. Lecture historique et mathématique</em> (De Gruyter, <a href="https://doi.org/10.1515/9783110336481">doi:10.1515/9783110336481</a>).</li>
       </ul>
       <h3>German</h3>
       <ul>
         <li>Friedrich Theodor Poselger, 1810: polygonal numbers only.</li>
-        <li>Otto Schulz, Berlin 1822: first complete translation into a modern language.</li>
-        <li>Gustav Wertheim, Leipzig 1890.</li>
-        <li>Arthur Czwalina, Göttingen 1952.</li>
+        <li>Otto Schulz, <em>Diophantus von Alexandria arithmetische Aufgaben nebst dessen Schrift über die Polygon-Zahlen</em>, Berlin 1822: first complete translation into a modern language.</li>
+        <li>Gustav Wertheim, <em>Die Arithmetik und die Schrift über Polygonalzahlen des Diophantus von Alexandria</em>, Leipzig, Teubner, 1890.</li>
+        <li>Arthur Czwalina, <em>Arithmetik des Diophantos aus Alexandria</em>, Göttingen, Vandenhoeck &amp; Ruprecht, 1952.</li>
       </ul>
       <h3>English</h3>
       <ul>
-        <li>Thomas L. Heath, <em>Diophantus of Alexandria. A Study in the History of Greek Algebra</em>, Cambridge 1885; 2nd ed. 1910: not a literal translation but a paraphrase in modern notation, yet the most widely circulated (reprinted by Dover).</li>
-        <li>Jacques Sesiano, <em>Books IV to VII of Diophantus’ Arithmetica in the Arabic Translation Attributed to Qusta ibn Luqa</em>, Springer 1982: Arabic text and English translation.</li>
+        <li>Thomas L. Heath, <em>Diophantus of Alexandria. A Study in the History of Greek Algebra</em>, Cambridge 1885; 2nd ed. 1910: not a literal translation but a paraphrase in modern notation, yet the most widely circulated (reprinted by Dover in 1964).</li>
+        <li>Jacques Sesiano, <em>Books IV to VII of Diophantus’ Arithmetica in the Arabic Translation Attributed to Qusta ibn Luqa</em>, New York, Springer, 1982: critical edition of the Arabic text, English translation and a study of the interpolations (<a href="https://doi.org/10.1007/978-1-4613-8174-7">doi:10.1007/978-1-4613-8174-7</a>).</li>
         <li>Jean Christianidis and Jeffrey Oaks, <em>The Arithmetica of Diophantus. A Complete Translation and Commentary</em>, Routledge 2023: first translation of all ten surviving books, with problem-by-problem commentary. Now the standard edition.</li>
       </ul>
       <h3>Arabic</h3>
-      <ul><li>Medieval translation attributed to Qusta ibn Luqa (ninth century), the only source for Books IV–VII. Roshdi Rashed published the Arabic text in Cairo in 1975, before his French edition.</li></ul>
+      <ul><li>Medieval translation attributed to Qusta ibn Luqa (ninth century), the only source for Books IV–VII. Roshdi Rashed published the Arabic text in Cairo in 1975 (<em>L’Art de l’Algèbre de Diophante</em>), before his French edition.</li></ul>
       <h3>Modern Greek</h3>
-      <ul><li>Evangelos Stamatis, Athens 1963, with Tannery’s ancient text facing.</li></ul>
+      <ul><li>Evangelos Stamatis, <em>Διοφάντου Ἀριθμητικά</em>, Athens 1963, with Tannery’s ancient text facing and including reconstructions of the lost problems.</li></ul>
       <h3>Russian</h3>
       <ul><li>Moscow, Nauka, 1974: translation by I. N. Veselovsky with commentary by I. G. Bashmakova; includes the polygonal numbers.</li></ul>
       <h3>Spanish</h3>
       <ul><li><em>La Aritmética y el libro Sobre los números poligonales</em>, Nivola 2007 (2 vols.): contains the six Greek and the four Arabic books; the most recent translation of Diophantus until the English one of 2023.</li></ul>
       <h3>Italian</h3>
-      <ul><li>No complete translation. The closest are Bombelli’s <em>Algebra</em> (1572), which adapts the problems, and Fabio Acerbi’s edition (2011) of the treatise on polygonal numbers.</li></ul>
+      <ul><li>No complete translation. The closest are Bombelli’s <em>Algebra</em> (1572), which adapts the problems, and Fabio Acerbi’s critical edition, with translation and commentary, of the treatise on polygonal numbers: <em>Diofanto. De polygonis numeris</em>, Pisa–Rome, Fabrizio Serra, 2011.</li></ul>
+      <h3>Dutch</h3>
+      <ul><li>Andreas Meskens and Nico van der Auwera, <em>Diophantos van Alexandrië, Arithmetika</em>, 2006.</li></ul>
       <p class="lead" style="margin-top:1.5rem">No complete translation into other languages is known.</p>
       </div>
     </section>
     <section class="biblio" id="bibliografia">
       <div data-i18n="es">
         <h2>Bibliografía</h2>
-        <p class="lead">Selección de ediciones, traducciones, estudios históricos y artículos matemáticos dedicados a Diofanto y a su <em>Aritmética</em>, con los títulos en su lengua original. Esta bibliografía no es exhaustiva: la <em>Aritmética</em> se cita en miles de trabajos, entre ellos casi todos los que tratan de las ecuaciones diofánticas, el último teorema de Fermat, los números congruentes, las ternas y cuádruplas diofánticas, las sumas de cuadrados, los puntos racionales de las curvas elípticas o el décimo problema de Hilbert. Aquí se reúnen las ediciones y traducciones, los estudios sobre la obra y su transmisión, y una muestra de la investigación matemática actual que parte de sus problemas.</p>
-        <h3>1. Ediciones y traducciones</h3>
-        <ul class="bib">
-        <li>Xylander (W. Holtzmann), <em>Diophanti Alexandrini Rerum Arithmeticarum libri sex … Item Liber de numeris polygonis</em>, Basilea, Episcopius, 1575. Primera edición impresa, en latín.</li>
-        <li>Bachet de Méziriac, C. G., <em>Diophanti Alexandrini Arithmeticorum libri sex, et De numeris multangulis liber unus</em>, París, Drouart/Cramoisy, 1621. Primera edición del texto griego, con traducción latina y comentario.</li>
-        <li>Fermat, S. de (ed.), <em>Diophanti Alexandrini Arithmeticorum libri sex … cum commentariis C. G. Bacheti et observationibus D. P. de Fermat</em>, Toulouse, B. Bosc, 1670. Imprime por primera vez las observaciones de Fermat.</li>
-        <li>Schulz, O., <em>Diophantus von Alexandria arithmetische Aufgaben nebst dessen Schrift über die Polygon-Zahlen</em>, Berlín, 1822. Primera traducción a una lengua moderna.</li>
-        <li>Wertheim, G., <em>Die Arithmetik und die Schrift über Polygonalzahlen des Diophantus von Alexandria</em>, Leipzig, Teubner, 1890.</li>
-        <li>Tannery, P., <em>Diophanti Alexandrini Opera omnia cum Graecis commentariis</em>, 2 vols., Leipzig, Teubner, 1893–1895. Edición crítica de referencia (texto griego y traducción latina; vol. II con los escolios y Planudes).</li>
-        <li>Ver Eecke, P., <em>Diophante d'Alexandrie. Les six livres arithmétiques et le livre des nombres polygones</em>, Brujas, Desclée de Brouwer, 1926 (reimpr. Blanchard, París, 1959).</li>
-        <li>Heath, T. L., <em>Diophantos of Alexandria: A Study in the History of Greek Algebra</em>, Cambridge University Press, 1885; 2.ª ed. ampliada <em>Diophantus of Alexandria</em>, 1910 (reimpr. Dover, 1964). Paráfrasis inglesa de los seis libros griegos y del tratado de los poligonales, con el suplemento sobre Fermat y Euler.</li>
-        <li>Czwalina, A., <em>Arithmetik des Diophantos aus Alexandria</em>, Gotinga, Vandenhoeck &amp; Ruprecht, 1952.</li>
-        <li>Stamatis, E. S., <em>Διοφάντου Ἀριθμητικά</em>, Atenas, 1963. Texto griego con traducción al griego moderno; incluye reconstrucciones de los problemas perdidos.</li>
-        <li>Bashmakova, I. G. (ed.), <em>Диофант Александрийский. Арифметика и книга о многоугольных числах</em>, Moscú, Nauka, 1974 (trad. rusa de I. N. Veselovskij).</li>
-        <li>Allard, A., <em>Diophante d'Alexandrie. Les Arithmétiques. Histoire du texte grec, édition critique, traductions et scolies</em>, tesis, Lovaina, 1980. Segunda edición crítica del texto griego.</li>
-        <li>Sesiano, J., <em>Books IV to VII of Diophantus' Arithmetica in the Arabic Translation Attributed to Qusṭā ibn Lūqā</em>, Sources in the History of Mathematics and Physical Sciences 3, Nueva York, Springer, 1982. <a href="https://doi.org/10.1007/978-1-4613-8174-7">doi:10.1007/978-1-4613-8174-7</a>. Edición crítica del texto árabe con traducción inglesa y estudio de las interpolaciones.</li>
-        <li>Rashed, R., <em>Diophante. Les Arithmétiques</em>, t. III (livre IV) y t. IV (livres V–VII), Collection des Universités de France, París, Les Belles Lettres, 1984. Edición del texto árabe con traducción francesa.</li>
-        <li>Rashed, R., <em>L'Art de l'Algèbre de Diophante</em>, edición árabe, El Cairo, Bibliothèque Nationale, 1975.</li>
-        <li>Meskens, A., y N. van der Auwera, <em>Diophantos van Alexandrië, Arithmetika</em>, 2006 (traducción neerlandesa).</li>
-        <li>Acerbi, F., <em>Diofanto. De polygonis numeris</em>, Pisa–Roma, Fabrizio Serra, 2011. Edición crítica, traducción italiana y comentario del tratado de los números poligonales.</li>
-        <li>Rashed, R., y C. Houzel, <em>Les Arithmétiques de Diophante. Lecture historique et mathématique</em>, Berlín, De Gruyter, 2013. <a href="https://doi.org/10.1515/9783110336481">doi:10.1515/9783110336481</a>.</li>
-        <li>Christianidis, J., y J. A. Oaks, <em>The Arithmetica of Diophantus: A Complete Translation and Commentary</em>, Londres–Nueva York, Routledge, 2023. Primera traducción inglesa de los diez libros conservados, con comentario problema a problema.</li>
-        </ul>
-        <h3>2. Estudios sobre Diofanto y su método</h3>
+        <p class="lead">Selección de estudios históricos y artículos matemáticos dedicados a Diofanto y a su <em>Aritmética</em>, con los títulos en su lengua original; las ediciones y traducciones de la obra están en la sección <a href="#ediciones">Ediciones y traducciones</a>. Esta bibliografía no es exhaustiva: la <em>Aritmética</em> se cita en miles de trabajos, entre ellos casi todos los que tratan de las ecuaciones diofánticas, el último teorema de Fermat, los números congruentes, las ternas y cuádruplas diofánticas, las sumas de cuadrados, los puntos racionales de las curvas elípticas o el décimo problema de Hilbert. Aquí se reúnen los estudios sobre la obra y su transmisión y una muestra de la investigación matemática actual que parte de sus problemas.</p>
+        <h3>1. Estudios sobre Diofanto y su método</h3>
         <h4>Clásicos</h4>
         <ul class="bib">
         <li>Nesselmann, G. H. F., <em>Die Algebra der Griechen</em>, Berlín, 1842.</li>
@@ -385,17 +407,17 @@
         <li>Sidoli, N., reseña de Christianidis y Oaks, <em>The Arithmetica of Diophantus</em>, <em>Aestimatio</em> 4 (2023), 1–18. <a href="https://doi.org/10.33137/aestimatio.v4.44123">doi:10.33137/aestimatio.v4.44123</a>.</li>
         <li>Hogendijk, J. P., reseña de J. Sesiano, <em>Books IV to VII of Diophantus' Arithmetica</em>, en línea (jphogendijk.nl).</li>
         </ul>
-        <h3>3. Los libros árabes y la tradición islámica</h3>
+        <h3>2. Los libros árabes y la tradición islámica</h3>
         <ul class="bib">
         <li>Sesiano, J., <em>The Arabic text of Books IV to VII of Diophantus' Arithmetica: translation and commentary</em>, tesis, Brown University, 1975.</li>
-        <li>Sesiano, J., <em>Books IV to VII…</em>, 1982 (véase § 1).</li>
+        <li>Sesiano, J., <em>Books IV to VII…</em>, 1982 (véase <a href="#ediciones">Ediciones y traducciones</a>).</li>
         <li>Rashed, R., «Les travaux perdus de Diophante», <em>Revue d'histoire des sciences</em> 27 (1974), 97–122, y 28 (1975), 3–30.</li>
-        <li>Rashed, R., <em>Les Arithmétiques</em>, 1984, y Rashed y Houzel 2013 (véase § 1).</li>
+        <li>Rashed, R., <em>Les Arithmétiques</em>, 1984, y Rashed y Houzel 2013 (véase <a href="#ediciones">Ediciones y traducciones</a>).</li>
         <li>Oaks, J. A., y H. M. Alkhateeb, «Māl, enunciations, and the prehistory of Arabic algebra», <em>Historia Mathematica</em> 32 (2005), 400–425.</li>
         <li>Oaks, J. A., «Equations and equating in Arabic mathematics», <em>Archives Internationales d'Histoire des Sciences</em> 60 (2010), 265–298.</li>
-        <li>Oaks, J. A., 2018, sobre al-Karajī y Diofanto (véase § 2). Al-Karajī tomó 101 problemas de los libros I–IV de la <em>Aritmética</em>.</li>
+        <li>Oaks, J. A., 2018, sobre al-Karajī y Diofanto (véase § 1). Al-Karajī tomó 101 problemas de los libros I–IV de la <em>Aritmética</em>.</li>
         </ul>
-        <h3>4. Recepción: Bizancio, Renacimiento, Viète, Bachet, Fermat</h3>
+        <h3>3. Recepción: Bizancio, Renacimiento, Viète, Bachet, Fermat</h3>
         <ul class="bib">
         <li>Allard, A., «Les scolies aux <em>Arithmétiques</em> de Diophante d'Alexandrie dans le <em>Matritensis Bibl. Nat.</em> 4678 et les <em>Vaticani gr.</em> 191 et 304», <em>Byzantion</em> 53 (1983).</li>
         <li>Allard, A., «Le manuscrit des <em>Arithmétiques</em> de Diophante d'Alexandrie et les lettres d'André Dudith dans le <em>Monacensis lat.</em> 10370», en <em>Mathemata: Festschrift für Helmuth Gericke</em>, 1985.</li>
@@ -410,11 +432,11 @@
         <li>Viète, F., <em>Zeteticorum libri quinque</em>, Tours, 1591. (reelaboración de problemas de Diofanto en el álgebra especiosa)</li>
         <li>Delahaye, D., y M. Mayero, «Diophantus' 20th problem and Fermat's Last Theorem for n = 4: Formalization of Fermat's proofs in the Coq proof assistant», <a href="https://arxiv.org/abs/cs/0510011">arXiv:cs/0510011</a> (2005).</li>
         </ul>
-        <h3>5. Matemática moderna a partir de problemas de la <em>Aritmética</em></h3>
+        <h3>4. Matemática moderna a partir de problemas de la <em>Aritmética</em></h3>
         <h4>Geometría de las soluciones de Diofanto</h4>
         <ul class="bib">
         <li>Pannekoek, R., «Diophantus revisited: On rational surfaces and K3 surfaces in the <em>Arithmetica</em>», <a href="https://arxiv.org/abs/1509.06138">arXiv:1509.06138</a> (2015). Muestra que varios problemas definen superficies racionales (del Pezzo) o K3 y que las soluciones de Diofanto las parametrizan.</li>
-        <li>Bashmakova 1981 (véase § 2).</li>
+        <li>Bashmakova 1981 (véase § 1).</li>
         </ul>
         <h4>Cuádruplas diofánticas (IV.19–20, III.10)</h4>
         <ul class="bib">
@@ -435,7 +457,7 @@
         </ul>
         <h4>Sumas de cuadrados y último teorema de Fermat (II.8, II.9, IV.29, V.9)</h4>
         <ul class="bib">
-        <li>Weil 1984 (véase § 2); Goldstein 1995 y Delahaye–Mayero 2005 (véase § 4).</li>
+        <li>Weil 1984 (véase § 1); Goldstein 1995 y Delahaye–Mayero 2005 (véase § 3).</li>
         <li>Para la demostración del último teorema: Wiles, A., «Modular elliptic curves and Fermat's Last Theorem», <em>Annals of Mathematics</em> 141 (1995), 443–551; Taylor, R., y A. Wiles, «Ring-theoretic properties of certain Hecke algebras», ibíd., 553–572.</li>
         </ul>
         <h4>Curvas de género 2 (IV.18, VIa.17)</h4>
@@ -456,30 +478,8 @@
       </div>
       <div data-i18n="en">
         <h2>Bibliography</h2>
-        <p class="lead">A selection of editions, translations, historical studies and mathematical articles devoted to Diophantus and his <em>Arithmetica</em>, with titles in their original language. This bibliography is not exhaustive: the <em>Arithmetica</em> is cited in thousands of works, among them almost all of those dealing with Diophantine equations, Fermat’s Last Theorem, congruent numbers, Diophantine triples and quadruples, sums of squares, rational points on elliptic curves or Hilbert’s tenth problem. Gathered here are the editions and translations, the studies on the work and its transmission, and a sample of current mathematical research that starts from its problems.</p>
-        <h3>Editions and translations</h3>
-        <ul class="bib">
-        <li>Xylander (W. Holtzmann), <em>Diophanti Alexandrini Rerum Arithmeticarum libri sex … Item Liber de numeris polygonis</em>, Basel, Episcopius, 1575. First printed edition, in Latin.</li>
-        <li>Bachet de Méziriac, C. G., <em>Diophanti Alexandrini Arithmeticorum libri sex, et De numeris multangulis liber unus</em>, Paris, Drouart/Cramoisy, 1621. First edition of the Greek text, with Latin translation and commentary.</li>
-        <li>Fermat, S. de (ed.), <em>Diophanti Alexandrini Arithmeticorum libri sex … cum commentariis C. G. Bacheti et observationibus D. P. de Fermat</em>, Toulouse, B. Bosc, 1670. First printing of Fermat’s observations.</li>
-        <li>Schulz, O., <em>Diophantus von Alexandria arithmetische Aufgaben nebst dessen Schrift über die Polygon-Zahlen</em>, Berlin, 1822. First translation into a modern language.</li>
-        <li>Wertheim, G., <em>Die Arithmetik und die Schrift über Polygonalzahlen des Diophantus von Alexandria</em>, Leipzig, Teubner, 1890.</li>
-        <li>Tannery, P., <em>Diophanti Alexandrini Opera omnia cum Graecis commentariis</em>, 2 vols., Leipzig, Teubner, 1893–1895. The standard critical edition (Greek text and Latin translation; vol. II with the scholia and Planudes).</li>
-        <li>Ver Eecke, P., <em>Diophante d'Alexandrie. Les six livres arithmétiques et le livre des nombres polygones</em>, Bruges, Desclée de Brouwer, 1926 (repr. Blanchard, Paris, 1959).</li>
-        <li>Heath, T. L., <em>Diophantos of Alexandria: A Study in the History of Greek Algebra</em>, Cambridge University Press, 1885; 2nd enlarged ed. <em>Diophantus of Alexandria</em>, 1910 (repr. Dover, 1964). English paraphrase of the six Greek books and the treatise on polygonal numbers, with the supplement on Fermat and Euler.</li>
-        <li>Czwalina, A., <em>Arithmetik des Diophantos aus Alexandria</em>, Göttingen, Vandenhoeck &amp; Ruprecht, 1952.</li>
-        <li>Stamatis, E. S., <em>Διοφάντου Ἀριθμητικά</em>, Athens, 1963. Greek text with Modern Greek translation; includes reconstructions of the lost problems.</li>
-        <li>Bashmakova, I. G. (ed.), <em>Диофант Александрийский. Арифметика и книга о многоугольных числах</em>, Moscow, Nauka, 1974 (Russian transl. by I. N. Veselovskij).</li>
-        <li>Allard, A., <em>Diophante d'Alexandrie. Les Arithmétiques. Histoire du texte grec, édition critique, traductions et scolies</em>, thesis, Louvain, 1980. Second critical edition of the Greek text.</li>
-        <li>Sesiano, J., <em>Books IV to VII of Diophantus' Arithmetica in the Arabic Translation Attributed to Qusṭā ibn Lūqā</em>, Sources in the History of Mathematics and Physical Sciences 3, New York, Springer, 1982. <a href="https://doi.org/10.1007/978-1-4613-8174-7">doi:10.1007/978-1-4613-8174-7</a>. Critical edition of the Arabic text with English translation and a study of the interpolations.</li>
-        <li>Rashed, R., <em>Diophante. Les Arithmétiques</em>, t. III (livre IV) and t. IV (livres V–VII), Collection des Universités de France, Paris, Les Belles Lettres, 1984. Edition of the Arabic text with French translation.</li>
-        <li>Rashed, R., <em>L'Art de l'Algèbre de Diophante</em>, Arabic edition, Cairo, Bibliothèque Nationale, 1975.</li>
-        <li>Meskens, A., and N. van der Auwera, <em>Diophantos van Alexandrië, Arithmetika</em>, 2006 (Dutch translation).</li>
-        <li>Acerbi, F., <em>Diophantus. De polygonis numeris</em>, Pisa–Roma, Fabrizio Serra, 2011. Critical edition, Italian translation and commentary of the treatise on polygonal numbers.</li>
-        <li>Rashed, R., and C. Houzel, <em>Les Arithmétiques de Diophante. Lecture historique et mathématique</em>, Berlin, De Gruyter, 2013. <a href="https://doi.org/10.1515/9783110336481">doi:10.1515/9783110336481</a>.</li>
-        <li>Christianidis, J., and J. A. Oaks, <em>The Arithmetica of Diophantus: A Complete Translation and Commentary</em>, London–New York, Routledge, 2023. First English translation of the ten extant books, with a problem-by-problem commentary.</li>
-        </ul>
-        <h3>Studies on Diophantus and his method</h3>
+        <p class="lead">A selection of historical studies and mathematical articles devoted to Diophantus and his <em>Arithmetica</em>, with titles in their original language; the editions and translations of the work are in the section <a href="#ediciones">Editions and translations</a>. This bibliography is not exhaustive: the <em>Arithmetica</em> is cited in thousands of works, among them almost all of those dealing with Diophantine equations, Fermat’s Last Theorem, congruent numbers, Diophantine triples and quadruples, sums of squares, rational points on elliptic curves or Hilbert’s tenth problem. Gathered here are the studies on the work and its transmission and a sample of current mathematical research that starts from its problems.</p>
+        <h3>1. Studies on Diophantus and his method</h3>
         <h4>Classics</h4>
         <ul class="bib">
         <li>Nesselmann, G. H. F., <em>Die Algebra der Griechen</em>, Berlin, 1842.</li>
@@ -519,17 +519,17 @@
         <li>Sidoli, N., review of Christianidis and Oaks, <em>The Arithmetica of Diophantus</em>, <em>Aestimatio</em> 4 (2023), 1–18. <a href="https://doi.org/10.33137/aestimatio.v4.44123">doi:10.33137/aestimatio.v4.44123</a>.</li>
         <li>Hogendijk, J. P., review of J. Sesiano, <em>Books IV to VII of Diophantus' Arithmetica</em>, online (jphogendijk.nl).</li>
         </ul>
-        <h3>The Arabic books and the Islamic tradition</h3>
+        <h3>2. The Arabic books and the Islamic tradition</h3>
         <ul class="bib">
         <li>Sesiano, J., <em>The Arabic text of Books IV to VII of Diophantus' Arithmetica: translation and commentary</em>, thesis, Brown University, 1975.</li>
-        <li>Sesiano, J., <em>Books IV to VII…</em>, 1982 (see § 1).</li>
+        <li>Sesiano, J., <em>Books IV to VII…</em>, 1982 (see <a href="#ediciones">Editions and translations</a>).</li>
         <li>Rashed, R., «Les travaux perdus de Diophante», <em>Revue d'histoire des sciences</em> 27 (1974), 97–122, and 28 (1975), 3–30.</li>
-        <li>Rashed, R., <em>Les Arithmétiques</em>, 1984, and Rashed and Houzel 2013 (see § 1).</li>
+        <li>Rashed, R., <em>Les Arithmétiques</em>, 1984, and Rashed and Houzel 2013 (see <a href="#ediciones">Editions and translations</a>).</li>
         <li>Oaks, J. A., and H. M. Alkhateeb, «Māl, enunciations, and the prehistory of Arabic algebra», <em>Historia Mathematica</em> 32 (2005), 400–425.</li>
         <li>Oaks, J. A., «Equations and equating in Arabic mathematics», <em>Archives Internationales d'Histoire des Sciences</em> 60 (2010), 265–298.</li>
-        <li>Oaks, J. A., 2018, on al-Karajī and Diophantus (see § 2). Al-Karajī took 101 problems from Books I–IV of the <em>Arithmetica</em>.</li>
+        <li>Oaks, J. A., 2018, on al-Karajī and Diophantus (see § 1). Al-Karajī took 101 problems from Books I–IV of the <em>Arithmetica</em>.</li>
         </ul>
-        <h3>Reception</h3>
+        <h3>3. Reception</h3>
         <ul class="bib">
         <li>Allard, A., «Les scolies aux <em>Arithmétiques</em> de Diophante d'Alexandrie dans le <em>Matritensis Bibl. Nat.</em> 4678 et les <em>Vaticani gr.</em> 191 et 304», <em>Byzantion</em> 53 (1983).</li>
         <li>Allard, A., «Le manuscrit des <em>Arithmétiques</em> de Diophante d'Alexandrie et les lettres d'André Dudith dans le <em>Monacensis lat.</em> 10370», in <em>Mathemata: Festschrift für Helmuth Gericke</em>, 1985.</li>
@@ -544,11 +544,11 @@
         <li>Viète, F., <em>Zeteticorum libri quinque</em>, Tours, 1591. (reworking of Diophantus’s problems in the specious algebra)</li>
         <li>Delahaye, D., and M. Mayero, «Diophantus' 20th problem and Fermat's Last Theorem for n = 4: Formalization of Fermat's proofs in the Coq proof assistant», <a href="https://arxiv.org/abs/cs/0510011">arXiv:cs/0510011</a> (2005).</li>
         </ul>
-        <h3>Modern mathematics on problems of the <em>Arithmetica</em></h3>
+        <h3>4. Modern mathematics on problems of the <em>Arithmetica</em></h3>
         <h4>Geometry of Diophantus’s solutions</h4>
         <ul class="bib">
         <li>Pannekoek, R., «Diophantus revisited: On rational surfaces and K3 surfaces in the <em>Arithmetica</em>», <a href="https://arxiv.org/abs/1509.06138">arXiv:1509.06138</a> (2015). Shows that several problems define rational (del Pezzo) or K3 surfaces and that Diophantus’s solutions parametrize them.</li>
-        <li>Bashmakova 1981 (see § 2).</li>
+        <li>Bashmakova 1981 (see § 1).</li>
         </ul>
         <h4>Diophantine quadruples (IV.19–20, III.10)</h4>
         <ul class="bib">
@@ -569,7 +569,7 @@
         </ul>
         <h4>Sums of squares and Fermat’s Last Theorem (II.8, II.9, IV.29, V.9)</h4>
         <ul class="bib">
-        <li>Weil 1984 (see § 2); Goldstein 1995 and Delahaye–Mayero 2005 (see § 4).</li>
+        <li>Weil 1984 (see § 1); Goldstein 1995 and Delahaye–Mayero 2005 (see § 3).</li>
         <li>For the proof of the Last Theorem: Wiles, A., «Modular elliptic curves and Fermat's Last Theorem», <em>Annals of Mathematics</em> 141 (1995), 443–551; Taylor, R., and A. Wiles, «Ring-theoretic properties of certain Hecke algebras», ibid., 553–572.</li>
         </ul>
         <h4>Genus-2 curves (IV.18, VIa.17)</h4>
@@ -598,6 +598,8 @@
     </footer>
 <!--/HOME-->
 </div>
-<script src="assets/idioma.js"></script>
+<script src="assets/idioma.js?v=532d6085"></script>
+<script src="assets/indice.js?v=547b42c3"></script>
+<script src="assets/buscar.js?v=a2d799a6"></script>
 </body>
 </html>
