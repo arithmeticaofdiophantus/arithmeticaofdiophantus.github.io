@@ -401,3 +401,15 @@
   .leg h3 { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); font-weight: 400; margin: 0.9rem 0 0.4rem; }
   .leg ul.bib li { font-size: 0.95rem; }
   @media (max-width: 34rem) { .leg dl { grid-template-columns: 1fr; gap: 0.15rem; } .leg dd { margin-bottom: 0.5rem; } }
+
+  /* ---------- Cómo está organizada la web ---------- */
+  .guide-sec { margin: 0 0 3rem; }
+  .g-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 1rem 1.6rem; margin-top: 0.8rem; }
+  .g-card { border-top: 2px solid var(--rubric); padding-top: 0.6rem; }
+  .g-card h3 { font-size: 1.12rem; font-weight: 500; margin: 0 0 0.35rem; }
+  .g-card h3 a { color: var(--ink); text-decoration: none; }
+  .g-card h3 a:hover { color: var(--rubric); }
+  .g-card p { margin: 0; font-size: 0.98rem; color: var(--ink-2); line-height: 1.55; }
+  .g-card b { color: var(--ink); font-weight: 600; }
+  .g-note { max-width: 75ch; color: var(--ink-2); font-size: 0.98rem; margin-top: 1.4rem; }
+  .hero-lead a { color: var(--rubric); }
