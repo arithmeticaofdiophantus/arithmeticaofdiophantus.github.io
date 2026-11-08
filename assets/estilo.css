@@ -413,3 +413,9 @@
   .g-card b { color: var(--ink); font-weight: 600; }
   .g-note { max-width: 75ch; color: var(--ink-2); font-size: 0.98rem; margin-top: 1.4rem; }
   .hero-lead a { color: var(--rubric); }
+
+  /* Enlace discreto a las estadísticas de visitas (abajo a la derecha del pie) */
+  .page { position: relative; }
+  .stats-dot { position: absolute; right: 1.25rem; bottom: 1.5rem; padding: 0.2rem 0.4rem; font-size: 1.1rem; line-height: 1; color: var(--ink-2); opacity: 0.18; text-decoration: none; transition: opacity 0.2s; }
+  .stats-dot:hover, .stats-dot:focus-visible { opacity: 1; color: var(--rubric); }
+  @media print { .stats-dot { display: none; } }
